@@ -24,16 +24,16 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="409dp"
-            android:layout_height="213dp"
-
+            android:layout_width="413dp"
+            android:layout_height="316dp"
+            android:layout_margin="0dp"
+            android:padding="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.615"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.319"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:layout_constraintVertical_bias="0.204"
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/textView"
