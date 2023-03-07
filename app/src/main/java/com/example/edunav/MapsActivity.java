@@ -138,12 +138,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //set latlong bounds
         mMap.setLatLngBoundsForCameraTarget(bounds);
 
-        //move camera to fill the bound to screen
-        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding));
-
         //set zoom to level to current so that you won't be able to zoom out viz. move outside bounds
 
         mMap.animateCamera(CameraUpdateFactory.zoomTo( 19.0f ) );
         mMap.setMinZoomPreference(18.6f);
+
+        //move camera to fill the bound to screen
+        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding));
+
+
     }
 }
