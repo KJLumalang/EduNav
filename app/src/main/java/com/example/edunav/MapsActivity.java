@@ -12,6 +12,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.edunav.databinding.ActivityMapsBinding;
 
@@ -90,7 +91,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /**
+    /** love u aiwa
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
      * This is where we can add markers or lines, add listeners or move the camera. In this case,
@@ -110,11 +111,39 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(school));
 
-        mMap.animateCamera( CameraUpdateFactory.zoomTo( 19.0f ) );
-
-        mMap.setMinZoomPreference(18.0f);
-
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
+
+        //
+        //get latlong for corners for specified city
+
+        LatLng one = new LatLng(13.791816, 121.002222);
+        LatLng two = new LatLng(13.793309, 121.003593);
+
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+
+        //add them to builder
+        builder.include(one);
+        builder.include(two);
+
+        LatLngBounds bounds = builder.build();
+
+        //get width and height to current display screen
+        int width = getResources().getDisplayMetrics().widthPixels;
+        int height = getResources().getDisplayMetrics().heightPixels;
+
+        // 20% padding
+        int padding = (int) (width * 0.20);
+
+        //set latlong bounds
+        mMap.setLatLngBoundsForCameraTarget(bounds);
+
+        //move camera to fill the bound to screen
+        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding));
+
+        //set zoom to level to current so that you won't be able to zoom out viz. move outside bounds
+
+        mMap.animateCamera(CameraUpdateFactory.zoomTo( 19.0f ) );
+        mMap.setMinZoomPreference(18.6f);
     }
 }
