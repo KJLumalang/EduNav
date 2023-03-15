@@ -11,6 +11,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -91,7 +92,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /** love u aiwa
+    /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
      * This is where we can add markers or lines, add listeners or move the camera. In this case,
@@ -105,20 +106,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         // Add a marker and move the camera
 
+        //markers
+        //school marker
         LatLng school = new LatLng(13.792659, 121.002470);
-
-        mMap.addMarker(new MarkerOptions().position(school).title("BTIHS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(school)
+                .title("BTIHS"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(school));
 
+        //evacuation area-a marker
+        LatLng area_a = new LatLng(13.792343, 121.003124);
+        mMap.addMarker(new MarkerOptions()
+                .position(area_a)
+                .title("EVACUATION AREA - A")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+
+
+        //map view
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
 
         //
         //get latlong for corners for specified city
 
-        LatLng one = new LatLng(13.791816, 121.002222);
-        LatLng two = new LatLng(13.793309, 121.003593);
+        LatLng one = new LatLng(13.791816, 121.002222);//SW
+        LatLng two = new LatLng(13.793309, 121.003593);//NE
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
 
