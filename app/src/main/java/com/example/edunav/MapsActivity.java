@@ -1,12 +1,20 @@
 package com.example.edunav;
-
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -14,19 +22,27 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.edunav.databinding.ActivityMapsBinding;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.io.IOException;
 import java.util.List;
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+import java.util.Locale;
+
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
+    private Marker marker;
+
+    private final static int REQUEST_CODE=1;
+
+    FusedLocationProviderClient fusedLocationProviderClient;
 
     // creating a variable
     // for search view.
     SearchView searchView;
-    private ActivityMapsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +53,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // initializing our search view.
         searchView = findViewById(R.id.idSearchView);
 
-
         // Obtain the SupportMapFragment and get notified
         // when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+
+
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+
+
+
 
         // adding on query listener for our search view.
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -92,6 +113,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -102,30 +124,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * installed Google Play services and returned to the app.
      */
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
-        // Add a marker and move the camera
 
+        // Add a marker and move the camera
         //markers
         //school marker
         LatLng school = new LatLng(13.792659, 121.002470);
-        mMap.addMarker(new MarkerOptions()
+        marker = mMap.addMarker(new MarkerOptions()
                 .position(school)
                 .title("BTIHS"));
-
         mMap.moveCamera(CameraUpdateFactory.newLatLng(school));
 
         //evacuation area-a marker
         LatLng area_a = new LatLng(13.792343, 121.003124);
-        mMap.addMarker(new MarkerOptions()
+      marker = mMap.addMarker(new MarkerOptions()
                 .position(area_a)
                 .title("EVACUATION AREA - A")
+                .snippet("Bauan Technical Integrated High School Evacuation Area - A")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
-
-
 
         //map view
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+
+        //marker on click listener
+        mMap.setOnMarkerClickListener(this);
 
 
         //
@@ -162,4 +185,75 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     }
+
+    @Override
+    public boolean onMarkerClick(@NonNull Marker marker) {
+
+        Toast.makeText(this, "My position is "+marker.getPosition(),
+                Toast.LENGTH_LONG).show();
+
+        getCurrentlocation();
+
+        return false;
+    }
+
+
+    private void getCurrentlocation() {
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            fusedLocationProviderClient.getLastLocation()
+                    .addOnSuccessListener(new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            if(location != null){
+
+                                Geocoder geocoder = new Geocoder(MapsActivity.this, Locale.getDefault());
+
+                                List<Address> addresses = null;
+                                try {
+
+                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                                    LatLng userloc = new LatLng((addresses.get(0).getLatitude()), (addresses.get(0).getLongitude()));
+
+                                    mMap.addMarker(new MarkerOptions()
+                                            .position(userloc)
+                                            .title("This is me"));
+
+                                } catch (IOException e) {
+                                    throw new RuntimeException(e);
+                                }
+
+
+                            }
+                        }
+                    });
+
+        } else {
+            askPermission();
+        }
+    }
+
+    private void askPermission() {
+        ActivityCompat.requestPermissions(MapsActivity.this, new String[]
+                {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        if(requestCode == REQUEST_CODE){
+            if(grantResults.length>0 && grantResults [0] == PackageManager.PERMISSION_GRANTED){
+                getCurrentlocation();
+            }
+
+            else {
+                Toast.makeText(this, "REQUIRED PERMISSION", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
 }
