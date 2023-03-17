@@ -31,6 +31,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -52,6 +53,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     SearchView searchView;
 
     Map<String, Integer> markers = new HashMap<String, Integer>();
+//polyline store
+    List<Polyline> polylines = new ArrayList<Polyline>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -217,17 +220,41 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public boolean onMarkerClick(@NonNull Marker marker) {
 
 
-        int id = markers.get(marker.getId());
-        Toast.makeText(this, "Marker ID is  " + id,
-                Toast.LENGTH_LONG).show();
 
+            int id = markers.get(marker.getId());
 
-        if(id == 2) {
-            getCurrentlocation();
+        for(Polyline line : polylines)
+        {
+            line.remove();
         }
 
+        polylines.clear();
 
 
+            Toast.makeText(this, "Marker ID is  " + id,
+                    Toast.LENGTH_LONG).show();
+
+
+            if (id == 2) {
+                //clear polyline
+                for(Polyline line : polylines)
+                {
+                    line.remove();
+                }
+                polylines.clear();
+                // Add polylines to the map.
+                // Polylines are useful to show a route or some other connection between points.
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7925633, 121.0025851),
+                                new LatLng(13.792438, 121.002805),
+                                new LatLng(13.792281, 121.002861),
+                                new LatLng(13.792343, 121.003124))));
+
+                getCurrentlocation();
+
+            }
 
 
 
@@ -253,21 +280,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
                                     LatLng userloc = new LatLng((addresses.get(0).getLatitude()), (addresses.get(0).getLongitude()));
 
-                                    mMap.addMarker(new MarkerOptions()
+
+                                    MarkerOptions userlocM = new MarkerOptions()
                                             .position(userloc)
-                                            .title("This is me"));
+                                            .title("This is me");
 
-                                    // Add polylines to the map.
-                                    // Polylines are useful to show a route or some other connection between points.
-                                    Polyline polyline1 = mMap.addPolyline(new PolylineOptions()
-                                            .clickable(true)
-                                            .add(
-                                                    new LatLng(userloc.latitude, userloc.longitude),
-                                                    new LatLng(13.792438, 121.002805),
-                                                    new LatLng(13.792281, 121.002861),
-                                                    new LatLng(13.792343, 121.003124)));
-
-
+                                    Marker mkr3 = mMap.addMarker(userlocM);
+                                    markers.put(mkr3.getId(), 3);
 
 
                                 } catch (IOException e) {
