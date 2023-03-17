@@ -10,7 +10,7 @@
         android:id="@+id/textView3"
         android:layout_width="367dp"
         android:layout_height="321dp"
-        android:text="Aiwa ang ganda ganda mo mwamwa and hugggg me always here for you, Lab u :-* "
+        android:text="School Info"
         android:textSize="40dp"
         tools:layout_editor_absoluteX="31dp"
         tools:layout_editor_absoluteY="133dp" />

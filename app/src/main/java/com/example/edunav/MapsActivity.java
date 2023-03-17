@@ -25,16 +25,23 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.edunav.databinding.ActivityMapsBinding;
+import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
+        GoogleMap.OnMarkerClickListener,
+        GoogleMap.OnPolylineClickListener,
+        GoogleMap.OnPolygonClickListener{
 
     private GoogleMap mMap;
-    private Marker marker;
 
     private final static int REQUEST_CODE=1;
 
@@ -43,6 +50,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // creating a variable
     // for search view.
     SearchView searchView;
+
+    Map<String, Integer> markers = new HashMap<String, Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,22 +136,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
+
+
         // Add a marker and move the camera
         //markers
         //school marker
+
         LatLng school = new LatLng(13.792659, 121.002470);
-        marker = mMap.addMarker(new MarkerOptions()
+        MarkerOptions schoolM = new MarkerOptions()
                 .position(school)
-                .title("BTIHS"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(school));
+                .snippet("Technical Integrated High School")
+                .rotation(0)
+                .title("BTIHS");
 
         //evacuation area-a marker
         LatLng area_a = new LatLng(13.792343, 121.003124);
-      marker = mMap.addMarker(new MarkerOptions()
+        MarkerOptions area_a_M = new MarkerOptions()
                 .position(area_a)
                 .title("EVACUATION AREA - A")
                 .snippet("Bauan Technical Integrated High School Evacuation Area - A")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+
+
+
+        Marker mkr = mMap.addMarker(schoolM);
+        Marker mkr1 = mMap.addMarker(area_a_M);
+        markers.put(mkr.getId(), 1);
+        markers.put(mkr1.getId(), 2);
+
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(school));
+
+
 
         //map view
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
@@ -184,15 +209,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding));
 
 
+
+
     }
 
     @Override
     public boolean onMarkerClick(@NonNull Marker marker) {
 
-        Toast.makeText(this, "My position is "+marker.getPosition(),
+
+        int id = markers.get(marker.getId());
+        Toast.makeText(this, "Marker ID is  " + id,
                 Toast.LENGTH_LONG).show();
 
-        getCurrentlocation();
+
+        if(id == 2) {
+            getCurrentlocation();
+        }
+
+
+
+
+
 
         return false;
     }
@@ -219,6 +256,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     mMap.addMarker(new MarkerOptions()
                                             .position(userloc)
                                             .title("This is me"));
+
+                                    // Add polylines to the map.
+                                    // Polylines are useful to show a route or some other connection between points.
+                                    Polyline polyline1 = mMap.addPolyline(new PolylineOptions()
+                                            .clickable(true)
+                                            .add(
+                                                    new LatLng(userloc.latitude, userloc.longitude),
+                                                    new LatLng(13.792438, 121.002805),
+                                                    new LatLng(13.792281, 121.002861),
+                                                    new LatLng(13.792343, 121.003124)));
+
+
+
 
                                 } catch (IOException e) {
                                     throw new RuntimeException(e);
@@ -256,4 +306,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
+    @Override
+    public void onPolygonClick(@NonNull Polygon polygon) {
+
+    }
+
+    @Override
+    public void onPolylineClick(@NonNull Polyline polyline) {
+
+    }
 }
