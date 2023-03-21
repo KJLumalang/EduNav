@@ -1,10 +1,25 @@
 package com.example.edunav;
 import android.Manifest;
+import android.app.SearchManager;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.DashPathEffect;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationRequest;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.CursorAdapter;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,45 +35,92 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Dash;
+import com.google.android.gms.maps.model.Dot;
+import com.google.android.gms.maps.model.Gap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.edunav.databinding.ActivityMapsBinding;
+import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.android.gms.maps.model.RoundCap;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import org.json.JSONObject;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleMap.OnMarkerClickListener,
         GoogleMap.OnPolylineClickListener,
-        GoogleMap.OnPolygonClickListener{
+        GoogleMap.OnPolygonClickListener,
+        LocationListener {
+
+
+
 
     private GoogleMap mMap;
-
     private final static int REQUEST_CODE=1;
-
     FusedLocationProviderClient fusedLocationProviderClient;
+
 
     // creating a variable
     // for search view.
     SearchView searchView;
 
+
+
     Map<String, Integer> markers = new HashMap<String, Integer>();
 //polyline store
     List<Polyline> polylines = new ArrayList<Polyline>();
 
+//for getting directions
+    private LatLng mOrigin;
+    private LatLng mDestination;
+    ArrayList<LatLng> mMarkerPoints;
+    private Polyline mPolyline;
+    private LatLng MarkerPos;
+
+
+    //for resizing drawables
+    public Bitmap resizeBitmap(String drawableName, int width, int height){
+        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(drawableName, "drawable", getPackageName()));
+        return Bitmap.createScaledBitmap(imageBitmap, width, height, false);
+    }
+
+
+    //polyline design
+    private static final int PATTERN_GAP_LENGTH_PX = 20;
+    private static final PatternItem GAP = new Gap(PATTERN_GAP_LENGTH_PX);
+    private static final PatternItem DOT = new Dot();
+    private static final List<PatternItem> PATTERN_POLYGON_ALPHA = Arrays.asList(GAP,DOT);
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+        View decorView = getWindow().getDecorView();
+
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
 
         setContentView(R.layout.activity_maps);
 
@@ -77,48 +139,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // adding on query listener for our search view.
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // on below line we are getting the
                 // location name from search view.
                 String location = searchView.getQuery().toString();
 
-                // below line is to create a list of address
-                // where we will store the list of all address.
-                List<Address> addressList = null;
+                Toast.makeText(getApplicationContext(),location, Toast.LENGTH_LONG).show();
 
-                // checking if the entered location is null or not.
-                if (location != null || location.equals("")) {
-                    // on below line we are creating and initializing a geo coder.
-                    Geocoder geocoder = new Geocoder(MapsActivity.this);
-                    try {
-                        // on below line we are getting location from the
-                        // location name and adding that location to address list.
-                        addressList = geocoder.getFromLocationName(location, 1);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    // on below line we are getting the location
-                    // from our list a first position.
-                    Address address = addressList.get(0);
 
-                    // on below line we are creating a variable for our location
-                    // where we will add our locations latitude and longitude.
-                    LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
-
-                    // on below line we are adding marker to that position.
-                    mMap.addMarker(new MarkerOptions().position(latLng).title(location));
-
-                    // below line is to animate camera to that position.
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
+                if (location.equals("school")){
+                    LatLng school1 = new LatLng(13.792659, 121.002470);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(school1));
                 }
+
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+
+
                 return false;
             }
+
         });
         // at last we calling our map fragment to update.
         mapFragment.getMapAsync(this);
@@ -139,8 +184,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
-
-
         // Add a marker and move the camera
         //markers
         //school marker
@@ -150,21 +193,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(school)
                 .snippet("Technical Integrated High School")
                 .rotation(0)
-                .title("BTIHS");
+                .title("BTIHS")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("school",160,160)));
+
+        Marker mkr = mMap.addMarker(schoolM);
+        markers.put(mkr.getId(), 1);
 
         //evacuation area-a marker
-        LatLng area_a = new LatLng(13.792343, 121.003124);
+        LatLng area_a = new LatLng(13.792288, 121.003093);
         MarkerOptions area_a_M = new MarkerOptions()
                 .position(area_a)
                 .title("EVACUATION AREA - A")
                 .snippet("Bauan Technical Integrated High School Evacuation Area - A")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",140,140)));
 
 
-
-        Marker mkr = mMap.addMarker(schoolM);
         Marker mkr1 = mMap.addMarker(area_a_M);
-        markers.put(mkr.getId(), 1);
         markers.put(mkr1.getId(), 2);
 
 
@@ -211,55 +255,236 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //move camera to fill the bound to screen
         mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding));
 
-
-
-
     }
 
     @Override
     public boolean onMarkerClick(@NonNull Marker marker) {
 
+        int id = markers.get(marker.getId());
 
 
-            int id = markers.get(marker.getId());
 
+        MarkerPos = marker.getPosition();
+
+        String id1 = marker.getTitle();
+
+        //clear polyline for every marker click
         for(Polyline line : polylines)
         {
             line.remove();
         }
-
         polylines.clear();
 
+        getCurrentlocation();
 
-            Toast.makeText(this, "Marker ID is  " + id,
+
+            Toast.makeText(this, "You clicked " + id1,
                     Toast.LENGTH_LONG).show();
 
 
             if (id == 2) {
-                //clear polyline
-                for(Polyline line : polylines)
-                {
-                    line.remove();
-                }
-                polylines.clear();
+
                 // Add polylines to the map.
                 // Polylines are useful to show a route or some other connection between points.
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7925633, 121.0025851),
+                                new LatLng(13.7926088,121.0025078),
+                                new LatLng( 13.7924463,121.0025413),
                                 new LatLng(13.792438, 121.002805),
                                 new LatLng(13.792281, 121.002861),
-                                new LatLng(13.792343, 121.003124))));
-
+                                new LatLng(13.792288, 121.003093))));
                 getCurrentlocation();
+
+
 
             }
 
-
-
         return false;
     }
+
+    private void drawRoute(){
+
+        // Getting URL to the Google Directions API
+        String url = getDirectionsUrl(mOrigin, mDestination);
+
+        DownloadTask downloadTask = new DownloadTask();
+
+        // Start downloading json data from Google Directions API
+        downloadTask.execute(url);
+    }
+
+
+    private String getDirectionsUrl(LatLng origin,LatLng dest){
+
+        // Origin of route
+        String str_origin = "origin="+origin.latitude+","+origin.longitude;
+
+        // Destination of route
+        String str_dest = "destination="+dest.latitude+","+dest.longitude;
+
+        // Key
+        String key = "key=" + getString(R.string.google_maps_key);
+
+        // Building the parameters to the web service
+        String parameters = str_origin+"&"+str_dest+"&"+key;
+
+        // Output format
+        String output = "json";
+
+        // Building the url to the web service
+        String url = "https://maps.googleapis.com/maps/api/directions/"+output+"?"+parameters;
+
+        return url;
+    }
+
+    /** A method to download json data from url */
+    private String downloadUrl(String strUrl) throws IOException {
+        String data = "";
+        InputStream iStream = null;
+        HttpURLConnection urlConnection = null;
+        try{
+            URL url = new URL(strUrl);
+
+            // Creating an http connection to communicate with url
+            urlConnection = (HttpURLConnection) url.openConnection();
+
+            // Connecting to url
+            urlConnection.connect();
+
+            // Reading data from url
+            iStream = urlConnection.getInputStream();
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(iStream));
+
+            StringBuffer sb  = new StringBuffer();
+
+            String line = "";
+            while( ( line = br.readLine())  != null){
+                sb.append(line);
+            }
+
+            data = sb.toString();
+
+            br.close();
+
+        }catch(Exception e){
+            Log.d("Exception on download", e.toString());
+        }finally{
+            iStream.close();
+            urlConnection.disconnect();
+        }
+        return data;
+    }
+
+
+
+
+    /** A class to download data from Google Directions URL */
+    private class DownloadTask extends AsyncTask<String, Void, String> {
+
+        // Downloading data in non-ui thread
+        @Override
+        protected String doInBackground(String... url) {
+
+            // For storing data from web service
+            String data = "";
+
+            try{
+                // Fetching the data from web service
+                data = downloadUrl(url[0]);
+                Log.d("DownloadTask","DownloadTask : " + data);
+            }catch(Exception e){
+                Log.d("Background Task",e.toString());
+            }
+            return data;
+        }
+
+        // Executes in UI thread, after the execution of
+        // doInBackground()
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+
+            ParserTask parserTask = new ParserTask();
+
+            // Invokes the thread for parsing the JSON data
+            parserTask.execute(result);
+        }
+    }
+
+    /** A class to parse the Google Directions in JSON format */
+    private class ParserTask extends AsyncTask<String, Integer, List<List<HashMap<String,String>>> >{
+
+        // Parsing the data in non-ui thread
+        @Override
+        protected List<List<HashMap<String, String>>> doInBackground(String... jsonData) {
+
+            JSONObject jObject;
+            List<List<HashMap<String, String>>> routes = null;
+
+            try{
+                jObject = new JSONObject(jsonData[0]);
+                DirectionsJSONParser parser = new DirectionsJSONParser();
+
+                // Starts parsing data
+                routes = parser.parse(jObject);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            return routes;
+        }
+
+        // Executes in UI thread, after the parsing process
+        @Override
+        protected void onPostExecute(List<List<HashMap<String, String>>> result) {
+            ArrayList<LatLng> points = null;
+            PolylineOptions lineOptions = null;
+
+            // Traversing through all the routes
+            for(int i=0;i<result.size();i++){
+                points = new ArrayList<LatLng>();
+                lineOptions = new PolylineOptions();
+
+                // Fetching i-th route
+                List<HashMap<String, String>> path = result.get(i);
+
+                // Fetching all the points in i-th route
+                for(int j=0;j<path.size();j++){
+                    HashMap<String,String> point = path.get(j);
+
+                    double lat = Double.parseDouble(point.get("lat"));
+                    double lng = Double.parseDouble(point.get("lng"));
+                    LatLng position = new LatLng(lat, lng);
+
+                    points.add(position);
+                }
+                List<PatternItem> pattern = null;
+                pattern = PATTERN_POLYGON_ALPHA;
+                // Adding all the points in the route to LineOptions
+                lineOptions.addAll(points);
+                lineOptions.width(20);
+                lineOptions.color(Color.BLUE);
+                lineOptions.pattern(pattern);
+            }
+
+            // Drawing polyline in the Google Map for the i-th route
+            if(lineOptions != null) {
+                if(mPolyline != null){
+                    mPolyline.remove();
+                }
+                mPolyline = mMap.addPolyline(lineOptions);
+
+
+            }else
+                Toast.makeText(getApplicationContext(),"No route is found", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+
+
+
 
 
     private void getCurrentlocation() {
@@ -277,16 +502,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 List<Address> addresses = null;
                                 try {
 
+
                                     addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
                                     LatLng userloc = new LatLng((addresses.get(0).getLatitude()), (addresses.get(0).getLongitude()));
 
 
                                     MarkerOptions userlocM = new MarkerOptions()
                                             .position(userloc)
-                                            .title("This is me");
+                                            .title("You")
+                                            .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("userloc",160,160)));
+
 
                                     Marker mkr3 = mMap.addMarker(userlocM);
                                     markers.put(mkr3.getId(), 3);
+
+
+
+                                    mOrigin = userloc;
+                                    mDestination = MarkerPos;
+                                    drawRoute();
+
 
 
                                 } catch (IOException e) {
@@ -295,13 +530,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
                             }
+
+
                         }
+
                     });
 
         } else {
             askPermission();
         }
+
     }
+
 
     private void askPermission() {
         ActivityCompat.requestPermissions(MapsActivity.this, new String[]
@@ -314,6 +554,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if(requestCode == REQUEST_CODE){
             if(grantResults.length>0 && grantResults [0] == PackageManager.PERMISSION_GRANTED){
+                Toast.makeText(this, "PERMISSION GRANTED", Toast.LENGTH_LONG).show();
                 getCurrentlocation();
             }
 
@@ -325,6 +566,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
+
+
+
+
     @Override
     public void onPolygonClick(@NonNull Polygon polygon) {
 
@@ -334,4 +579,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onPolylineClick(@NonNull Polyline polyline) {
 
     }
+
+
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+
+    }
+
+
+
+
+
+
+
+
 }
