@@ -1,11 +1,11 @@
 package com.example.edunav;
 import android.Manifest;
 import android.app.SearchManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.DashPathEffect;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -71,8 +71,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LocationListener {
 
 
-
-
     private GoogleMap mMap;
     private final static int REQUEST_CODE=1;
     FusedLocationProviderClient fusedLocationProviderClient;
@@ -96,6 +94,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LatLng MarkerPos;
 
 
+
     //for resizing drawables
     public Bitmap resizeBitmap(String drawableName, int width, int height){
         Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(drawableName, "drawable", getPackageName()));
@@ -114,6 +113,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         View decorView = getWindow().getDecorView();
@@ -146,12 +147,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 // location name from search view.
                 String location = searchView.getQuery().toString();
 
-                Toast.makeText(getApplicationContext(),location, Toast.LENGTH_LONG).show();
 
 
-                if (location.equals("school")){
-                    LatLng school1 = new LatLng(13.792659, 121.002470);
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(school1));
+                if (location.equalsIgnoreCase("school")){
+                    LatLng loc = new LatLng(13.792659, 121.002470);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+
+                } else if (location.equalsIgnoreCase("evacuation area - a")) {
+                    LatLng loc = new LatLng(13.792288, 121.003093);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"No result please try again", Toast.LENGTH_LONG).show();
                 }
 
                 return false;
@@ -168,6 +175,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // at last we calling our map fragment to update.
         mapFragment.getMapAsync(this);
 
+
+    }
+
+    public void about_us(View view){
+        Intent about_us = new Intent(MapsActivity.this, about_us.class);
+        startActivity(about_us);
+    }
+
+    public void home(View view){
+        Intent home = new Intent(MapsActivity.this, MainActivity2.class);
+        startActivity(home);
     }
 
 
@@ -183,6 +201,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.getUiSettings().setMapToolbarEnabled(false);
 
         // Add a marker and move the camera
         //markers
@@ -213,7 +232,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(school));
-
 
 
         //map view
@@ -261,9 +279,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public boolean onMarkerClick(@NonNull Marker marker) {
 
         int id = markers.get(marker.getId());
-
-
-
         MarkerPos = marker.getPosition();
 
         String id1 = marker.getTitle();
@@ -294,6 +309,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 new LatLng(13.792438, 121.002805),
                                 new LatLng(13.792281, 121.002861),
                                 new LatLng(13.792288, 121.003093))));
+
                 getCurrentlocation();
 
 
@@ -466,6 +482,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 lineOptions.width(20);
                 lineOptions.color(Color.BLUE);
                 lineOptions.pattern(pattern);
+                lineOptions.startCap(new RoundCap());
             }
 
             // Drawing polyline in the Google Map for the i-th route
@@ -513,15 +530,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                             .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("userloc",160,160)));
 
 
+
+
+
                                     Marker mkr3 = mMap.addMarker(userlocM);
                                     markers.put(mkr3.getId(), 3);
-
 
 
                                     mOrigin = userloc;
                                     mDestination = MarkerPos;
                                     drawRoute();
 
+
+                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                                    userloc = new LatLng((addresses.get(0).getLatitude()), (addresses.get(0).getLongitude()));
+                                    mkr3.setPosition(userloc);
 
 
                                 } catch (IOException e) {
@@ -585,10 +608,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onLocationChanged(@NonNull Location location) {
 
     }
-
-
-
-
 
 
 

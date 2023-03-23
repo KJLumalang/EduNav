@@ -1,31 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <!--fragment to display our maps-->
     <fragment xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MapsActivity" />
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout"
+        tools:context=".MapsActivity"/>
 
-    <!--search view to search our location-->
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/idSearchView"
+
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="-10dp"
+            android:layout_weight="1"
+            android:src="@drawable/logo"
+            android:layout_alignParentStart="true"
+            android:onClick="about_us"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/idSearchView"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/round_btn"
+            android:elevation="5dp"
+            android:layout_weight="1"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search Here"
+            />
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:layout_margin="10dp"
-        android:background="#BFBFBF"
-        android:elevation="5dp"
-        app:iconifiedByDefault="false"
-        app:queryHint="Search Here"
-        />
+        app:fab_icon="@drawable/fab"
+        app:srcCompat="@drawable/fab">
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            app:backgroundTint="@color/white"
+            app:fab_size="normal"
+            app:layout_anchor="@id/fab"
+            app:layout_anchorGravity="center"
+            app:rippleColor="@color/purple_200"
+            app:fab_icon="@drawable/home"
+            android:onClick="home"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            app:backgroundTint="@color/white"
+            app:fab_size="normal"
+            app:layout_anchor="@id/fab"
+            app:layout_anchorGravity="center"
+            app:rippleColor="@color/purple_200"
+            app:fab_icon="@drawable/sections"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/suggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            app:backgroundTint="@color/white"
+            app:fab_size="normal"
+            app:layout_anchor="@id/fab"
+            app:layout_anchorGravity="center"
+            app:rippleColor="@color/purple_200"
+            app:fab_icon="@drawable/suggest"
+            />
 
 
 
 
-</RelativeLayout>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+
+
+
+
+
+
+
+</FrameLayout>
