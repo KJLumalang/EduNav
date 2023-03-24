@@ -1,7 +1,6 @@
 package com.example.edunav;
 import android.Manifest;
 import android.app.AlertDialog;
-import android.app.SearchManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -12,16 +11,11 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
-import android.location.LocationRequest;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.CursorAdapter;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,14 +31,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.Dash;
 import com.google.android.gms.maps.model.Dot;
 import com.google.android.gms.maps.model.Gap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.edunav.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.Polyline;
@@ -91,9 +83,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //for getting directions
     private LatLng mOrigin;
     private LatLng mDestination;
-    ArrayList<LatLng> mMarkerPoints;
+
+    ArrayList<Integer> mMarkerPoints = new ArrayList<Integer>();;
     private Polyline mPolyline;
     private LatLng MarkerPos;
+
 
 
 
@@ -290,7 +284,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public boolean onMarkerClick(@NonNull Marker marker) {
 
+
         int id = markers.get(marker.getId());
+
+        mMarkerPoints.add(id);
+
         MarkerPos = marker.getPosition();
 
         String id1 = marker.getTitle();
@@ -302,33 +300,50 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         polylines.clear();
 
+
+
+        getPath();
         getCurrentlocation();
 
 
-            Toast.makeText(this, "You clicked " + id1,
+        return false;
+    }
+
+    private void getPath(){
+
+        if (mMarkerPoints.size() == 2){
+
+            Toast.makeText(this, "Dalawa na " + mMarkerPoints.size(),
                     Toast.LENGTH_LONG).show();
 
 
-            if (id == 2) {
+            if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 2 || mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 1){
 
-                // Add polylines to the map.
-                // Polylines are useful to show a route or some other connection between points.
-                polylines.add(this.mMap.addPolyline(new PolylineOptions()
-                        .clickable(true)
-                        .add(
-                                new LatLng(13.7926088,121.0025078),
-                                new LatLng( 13.7924463,121.0025413),
-                                new LatLng(13.792438, 121.002805),
-                                new LatLng(13.792281, 121.002861),
-                                new LatLng(13.792288, 121.003093))));
-
-                getCurrentlocation();
-
+                    // Add polylines to the map.
+                    // Polylines are useful to show a route or some other connection between points.
+                    polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                            .clickable(true)
+                            .add(
+                                    new LatLng(13.7926088,121.0025078),
+                                    new LatLng( 13.7924463,121.0025413),
+                                    new LatLng(13.792438, 121.002805),
+                                    new LatLng(13.792281, 121.002861),
+                                    new LatLng(13.792288, 121.003093))));
 
 
             }
 
-        return false;
+
+
+
+
+            mMarkerPoints.clear();
+
+
+
+        }
+
+
     }
 
     private void drawRoute(){

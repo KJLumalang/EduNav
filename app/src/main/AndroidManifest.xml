@@ -45,6 +45,11 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
+            android:name=".questions"
+            android:exported="false" />
+
+
+        <activity
             android:name=".about_us"
             android:exported="false" />
         <activity
