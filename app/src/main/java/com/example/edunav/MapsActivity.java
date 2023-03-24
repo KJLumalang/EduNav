@@ -1,6 +1,8 @@
 package com.example.edunav;
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.SearchManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -186,6 +188,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void home(View view){
         Intent home = new Intent(MapsActivity.this, MainActivity2.class);
         startActivity(home);
+    }
+
+    public void questions(View view){
+        Intent questions = new Intent(MapsActivity.this, questions.class);
+        startActivity(questions);
+    }
+
+    public void sections(View view){
+        Intent sections = new Intent(MapsActivity.this, sections.class);
+        startActivity(sections);
     }
 
 
@@ -609,7 +621,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setMessage("Do you want to Exit?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //if user pressed "yes", then he is allowed to exit from application
+                finish();
+            }
+        });
+        builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //if user select "No", just cancel this dialog and continue with app
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert=builder.create();
+        alert.show();
+    }
 
 
 }

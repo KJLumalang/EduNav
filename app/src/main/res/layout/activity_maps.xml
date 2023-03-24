@@ -88,6 +88,7 @@
             app:layout_anchorGravity="center"
             app:rippleColor="@color/purple_200"
             app:fab_icon="@drawable/sections"
+            android:onClick="sections"
             />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
