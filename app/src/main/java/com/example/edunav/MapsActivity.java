@@ -313,14 +313,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if (mMarkerPoints.size() == 2){
 
-            Toast.makeText(this, "Dalawa na " + mMarkerPoints.size(),
-                    Toast.LENGTH_LONG).show();
-
 
             if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 2 || mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 1){
 
-                    // Add polylines to the map.
-                    // Polylines are useful to show a route or some other connection between points.
+                    // Admin Bdlg to Evacuation Area A
                     polylines.add(this.mMap.addPolyline(new PolylineOptions()
                             .clickable(true)
                             .add(
@@ -329,7 +325,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     new LatLng(13.792438, 121.002805),
                                     new LatLng(13.792281, 121.002861),
                                     new LatLng(13.792288, 121.003093))));
-
 
             }
 
@@ -556,10 +551,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                             .title("You")
                                             .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("userloc",160,160)));
 
-
-
-
-
                                     Marker mkr3 = mMap.addMarker(userlocM);
                                     markers.put(mkr3.getId(), 3);
 
@@ -567,11 +558,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     mOrigin = userloc;
                                     mDestination = MarkerPos;
                                     drawRoute();
-
-
-                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                                    userloc = new LatLng((addresses.get(0).getLatitude()), (addresses.get(0).getLongitude()));
-                                    mkr3.setPosition(userloc);
 
 
                                 } catch (IOException e) {
