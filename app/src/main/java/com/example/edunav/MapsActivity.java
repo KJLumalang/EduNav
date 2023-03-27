@@ -144,7 +144,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String location = searchView.getQuery().toString();
 
 
-
                 if (location.equalsIgnoreCase("school")){
                     LatLng loc = new LatLng(13.792659, 121.002470);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
@@ -175,8 +174,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void about_us(View view){
-        Intent about_us = new Intent(MapsActivity.this, about_us.class);
-        startActivity(about_us);
+        Intent school_info = new Intent(MapsActivity.this, school_info.class);
+        startActivity(school_info);
     }
 
     public void home(View view){
@@ -209,35 +208,277 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         mMap.getUiSettings().setMapToolbarEnabled(false);
 
+
         // Add a marker and move the camera
         //markers
         //school marker
 
-        LatLng school = new LatLng(13.792659, 121.002470);
-        MarkerOptions schoolM = new MarkerOptions()
-                .position(school)
-                .snippet("Technical Integrated High School")
+        LatLng admin = new LatLng(13.7924604,121.0025501);
+        MarkerOptions adminM = new MarkerOptions()
+                .position(admin)
                 .rotation(0)
-                .title("BTIHS")
+                .title("Admin Building")
                 .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("school",160,160)));
 
-        Marker mkr = mMap.addMarker(schoolM);
-        markers.put(mkr.getId(), 1);
+        Marker mkr1 = mMap.addMarker(adminM);
+        markers.put(mkr1.getId(), 1);
 
         //evacuation area-a marker
         LatLng area_a = new LatLng(13.792288, 121.003093);
         MarkerOptions area_a_M = new MarkerOptions()
                 .position(area_a)
-                .title("EVACUATION AREA - A")
-                .snippet("Bauan Technical Integrated High School Evacuation Area - A")
+                .title("Rizal Park")
                 .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",140,140)));
 
+        Marker mkr2 = mMap.addMarker(area_a_M);
+        markers.put(mkr2.getId(), 2);
 
-        Marker mkr1 = mMap.addMarker(area_a_M);
-        markers.put(mkr1.getId(), 2);
+
+        //field marker
+        LatLng area_b = new LatLng(13.792933, 121.002053);
+        MarkerOptions area_b_M = new MarkerOptions()
+                .position(area_b)
+                .title("Field")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",140,140)));
+
+        Marker mkr3 = mMap.addMarker(area_b_M);
+        markers.put(mkr3.getId(), 3);
+
+        //poolside
+        LatLng poolside = new LatLng(13.793341, 121.002542);
+        MarkerOptions poolside_M = new MarkerOptions()
+                .position(poolside)
+                .title("Field")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",140,140)));
+
+        Marker mkr4 = mMap.addMarker(poolside_M);
+        markers.put(mkr4.getId(), 4);
 
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(school));
+        //shs building b
+        LatLng shs_b = new LatLng(13.793341, 121.002542);
+        MarkerOptions shs_b_M = new MarkerOptions()
+                .position(shs_b)
+                .title("SHS Building B")
+                .snippet("HUMSS & ABM")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr5 = mMap.addMarker(shs_b_M);
+        markers.put(mkr5.getId(), 5);
+
+        //shs classrooms
+        LatLng shsclassrooms = new LatLng(13.7932733,121.0023886);
+        MarkerOptions shsclassrooms_M = new MarkerOptions()
+                .position(shsclassrooms)
+                .title("SHS Classrooms")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr6 = mMap.addMarker(shsclassrooms_M);
+        markers.put(mkr6.getId(), 6);
+
+        //beauty care
+        LatLng beauty = new LatLng(13.7930047,121.0025058);
+        MarkerOptions beauty_M = new MarkerOptions()
+                .position(beauty)
+                .title("Beauty Care Room")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("beauty",140,140)));
+
+        Marker mkr7 = mMap.addMarker(beauty_M);
+        markers.put(mkr7.getId(), 7);
+
+        //cookery
+        LatLng cookery = new LatLng(13.7930606,121.0026786);
+        MarkerOptions cookery_M = new MarkerOptions()
+                .position(cookery)
+                .title("Cookery Rooms")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",140,140)));
+
+        Marker mkr8 = mMap.addMarker(cookery_M);
+        markers.put(mkr8.getId(), 8);
+
+
+        //guidance
+        LatLng guidance = new LatLng(13.7929052,121.0025095);
+        MarkerOptions guidance_M = new MarkerOptions()
+                .position(guidance)
+                .title("Guidance Office")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",140,140)));
+
+        Marker mkr9 = mMap.addMarker(guidance_M);
+        markers.put(mkr9.getId(), 9);
+
+        //he
+        LatLng he = new LatLng(13.7928834,121.0026764);
+        MarkerOptions he_M = new MarkerOptions()
+                .position(he)
+                .title("H.E Room")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr10 = mMap.addMarker(he_M);
+        markers.put(mkr10.getId(), 10);
+
+
+        //canteen
+        LatLng canteen = new LatLng(13.7927337,121.0026818);
+        MarkerOptions canteen_M = new MarkerOptions()
+                .position(canteen)
+                .title("Canteen")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",140,140)));
+
+        Marker mkr11 = mMap.addMarker(canteen_M);
+        markers.put(mkr11.getId(), 11);
+
+        //tvl
+        LatLng tvl = new LatLng(13.7925837,121.0027081);
+        MarkerOptions tvl_M = new MarkerOptions()
+                .position(tvl)
+                .title("TVL Classroom")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr12 = mMap.addMarker(tvl_M);
+        markers.put(mkr12.getId(), 12);
+
+
+        //science park
+        LatLng science = new LatLng(13.7922604,121.0026845);
+        MarkerOptions science_M = new MarkerOptions()
+                .position(science)
+                .title("Science Park")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",140,140)));
+
+        Marker mkr13 = mMap.addMarker(science_M);
+        markers.put(mkr13.getId(), 13);
+
+        //stve classrooms
+        LatLng stve = new LatLng(13.7923624,121.0037623);
+        MarkerOptions stve_M = new MarkerOptions()
+                .position(stve)
+                .title("STVE Classrooms")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr14 = mMap.addMarker(stve_M);
+        markers.put(mkr14.getId(), 14);
+
+        //main gate
+        LatLng maingate = new LatLng(13.7922103,121.0039427);
+        MarkerOptions maingate_M = new MarkerOptions()
+                .position(maingate)
+                .title("Main Gate")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gate",140,140)));
+
+        Marker mkr15 = mMap.addMarker(maingate_M);
+        markers.put(mkr15.getId(), 15);
+
+
+        //gate
+        LatLng gate = new LatLng(13.7933748,121.0017241);
+        MarkerOptions gate_M = new MarkerOptions()
+                .position(gate)
+                .title("Gate")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gate",140,140)));
+
+        Marker mkr16 = mMap.addMarker(gate_M);
+        markers.put(mkr16.getId(), 16);
+
+        //shs bulding a
+        LatLng shs_a = new LatLng(13.7925286,121.0020808);
+        MarkerOptions shs_a_M = new MarkerOptions()
+                .position(shs_a)
+                .title("SHS Building A")
+                .snippet("STEM")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr17 = mMap.addMarker(shs_a_M);
+        markers.put(mkr17.getId(), 17);
+
+        //gym
+        LatLng gym = new LatLng(13.7922342,121.0020808);
+        MarkerOptions gym_M = new MarkerOptions()
+                .position(gym)
+                .title("Gymnasium")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gym",140,140)));
+
+        Marker mkr18 = mMap.addMarker(gym_M);
+        markers.put(mkr18.getId(), 18);
+
+
+        //g10 building a
+        LatLng g10buildinga = new LatLng(13.7919917,121.0023384);
+        MarkerOptions g10buildinga_M = new MarkerOptions()
+                .position(g10buildinga)
+                .title("Grade 10 Building A")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr19 = mMap.addMarker(g10buildinga_M);
+        markers.put(mkr19.getId(), 19);
+
+        //electricity room
+        LatLng electricity = new LatLng(13.7918212,121.0027778);
+        MarkerOptions electricity_M = new MarkerOptions()
+                .position(electricity)
+                .title("Electricity Room")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("electric",140,140)));
+
+        Marker mkr20 = mMap.addMarker(electricity_M);
+        markers.put(mkr20.getId(), 20);
+
+        //grade 10 building b
+        LatLng g10buildingb = new LatLng(13.791917,121.001679);
+        MarkerOptions g10buildingb_M = new MarkerOptions()
+                .position(g10buildingb)
+                .title("Grade 10 Building B")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr21 = mMap.addMarker(g10buildingb_M);
+        markers.put(mkr21.getId(), 21);
+
+
+        //grade 8 classrooms
+        LatLng g8rooms = new LatLng(13.7918133,121.002288);
+        MarkerOptions g8rooms_M = new MarkerOptions()
+                .position(g8rooms)
+                .title("Grade 8 Classrooms")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr22 = mMap.addMarker(g8rooms_M);
+        markers.put(mkr22.getId(), 22);
+
+
+
+        //main building
+        LatLng main = new LatLng(13.7925991,121.0031756);
+        MarkerOptions main_M = new MarkerOptions()
+                .position(main)
+                .title("Main Building")
+                .snippet("Grade 9 & Grade 7")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+
+        Marker mkr23 = mMap.addMarker(main_M);
+        markers.put(mkr23.getId(), 23);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(admin));
 
 
         //map view
@@ -301,45 +542,147 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         polylines.clear();
 
 
-
-        getPath();
         getCurrentlocation();
+        getPath();
+
 
 
         return false;
     }
 
+
+
+
+    private void getCurrentlocation() {
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            fusedLocationProviderClient.getLastLocation()
+                    .addOnSuccessListener(new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            if(location != null){
+
+                                Geocoder geocoder = new Geocoder(MapsActivity.this, Locale.getDefault());
+
+                                List<Address> addresses = null;
+                                try {
+
+
+                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                                    LatLng userloc = new LatLng((addresses.get(0).getLatitude()), (addresses.get(0).getLongitude()));
+
+
+                                    MarkerOptions userlocM = new MarkerOptions()
+                                            .position(userloc)
+                                            .title("You")
+                                            .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("userloc",150,150)));
+
+                                    Marker mkr = mMap.addMarker(userlocM);
+                                    markers.put(mkr.getId(), 0);
+
+
+
+                                    mOrigin = userloc;
+                                    mDestination = MarkerPos;
+                                    drawRoute();
+
+
+                                } catch (IOException e) {
+                                    throw new RuntimeException(e);
+                                }
+
+
+                            }
+
+
+                        }
+
+                    });
+
+        } else {
+            askPermission();
+        }
+
+    }
+
+
     private void getPath(){
 
-        if (mMarkerPoints.size() == 2){
+        if (mMarkerPoints.size() == 2) {
+
+            // Admin Bdlg to Rizal Park
+            if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 2 || mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 1) {
 
 
-            if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 2 || mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 1){
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7926088, 121.0025078),
+                                new LatLng(13.7924463, 121.0025413),
+                                new LatLng(13.792438, 121.002805),
+                                new LatLng(13.792281, 121.002861),
+                                new LatLng(13.792288, 121.003093))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
 
-                    // Admin Bdlg to Evacuation Area A
-                    polylines.add(this.mMap.addPolyline(new PolylineOptions()
-                            .clickable(true)
-                            .add(
-                                    new LatLng(13.7926088,121.0025078),
-                                    new LatLng( 13.7924463,121.0025413),
-                                    new LatLng(13.792438, 121.002805),
-                                    new LatLng(13.792281, 121.002861),
-                                    new LatLng(13.792288, 121.003093))));
+                mMarkerPoints.clear();
+
+            //admin bldg - field
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 3 || mMarkerPoints.get(0) == 3 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7926088, 121.0025078),
+                                new LatLng(13.792777, 121.002497),
+                                new LatLng(13.792812, 121.002367),
+                                new LatLng(13.792991, 121.002333),
+                                new LatLng(13.792886, 121.002179),
+                                new LatLng(13.792933, 121.002053))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+
+
+
+                //rizal park - field
+            } else if (mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 3 || mMarkerPoints.get(0) == 3 && mMarkerPoints.get(1) == 2) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792288, 121.003093),
+                                new LatLng(13.792422, 121.002807),
+                                new LatLng(13.7924555, 121.0025448),
+                                new LatLng(13.792812, 121.002367),
+                                new LatLng(13.792991, 121.002333),
+                                new LatLng(13.792886, 121.002179),
+                                new LatLng(13.792933, 121.002053))
+                                .color(Color.BLUE)
+                                .width(20)
+                                .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
 
             }
+            else {
 
-
-
-
-
-            mMarkerPoints.clear();
-
-
-
+            }
         }
 
 
+
     }
+
+
+
+
+
+
+
 
     private void drawRoute(){
 
@@ -504,7 +847,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 lineOptions.width(20);
                 lineOptions.color(Color.BLUE);
                 lineOptions.pattern(pattern);
-                lineOptions.startCap(new RoundCap());
+
             }
 
             // Drawing polyline in the Google Map for the i-th route
@@ -524,59 +867,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-
-
-    private void getCurrentlocation() {
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-
-            fusedLocationProviderClient.getLastLocation()
-                    .addOnSuccessListener(new OnSuccessListener<Location>() {
-                        @Override
-                        public void onSuccess(Location location) {
-                            if(location != null){
-
-                                Geocoder geocoder = new Geocoder(MapsActivity.this, Locale.getDefault());
-
-                                List<Address> addresses = null;
-                                try {
-
-
-                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                                    LatLng userloc = new LatLng((addresses.get(0).getLatitude()), (addresses.get(0).getLongitude()));
-
-
-                                    MarkerOptions userlocM = new MarkerOptions()
-                                            .position(userloc)
-                                            .title("You")
-                                            .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("userloc",160,160)));
-
-                                    Marker mkr3 = mMap.addMarker(userlocM);
-                                    markers.put(mkr3.getId(), 3);
-
-
-                                    mOrigin = userloc;
-                                    mDestination = MarkerPos;
-                                    drawRoute();
-
-
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-
-
-                            }
-
-
-                        }
-
-                    });
-
-        } else {
-            askPermission();
-        }
-
-    }
 
 
     private void askPermission() {

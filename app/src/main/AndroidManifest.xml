@@ -48,6 +48,10 @@
             android:name=".questions"
             android:exported="false" />
 
+        <activity
+            android:name=".sections"
+            android:exported="false" />
+
 
         <activity
             android:name=".about_us"
