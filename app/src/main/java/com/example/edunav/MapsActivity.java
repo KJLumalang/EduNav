@@ -228,7 +228,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions area_a_M = new MarkerOptions()
                 .position(area_a)
                 .title("Rizal Park")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",100,100)));
 
         Marker mkr2 = mMap.addMarker(area_a_M);
         markers.put(mkr2.getId(), 2);
@@ -239,7 +239,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions area_b_M = new MarkerOptions()
                 .position(area_b)
                 .title("Field")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",100,100)));
 
         Marker mkr3 = mMap.addMarker(area_b_M);
         markers.put(mkr3.getId(), 3);
@@ -248,20 +248,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng poolside = new LatLng(13.793341, 121.002542);
         MarkerOptions poolside_M = new MarkerOptions()
                 .position(poolside)
-                .title("Field")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",140,140)));
+                .title("Poolside")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",100,100)));
 
         Marker mkr4 = mMap.addMarker(poolside_M);
         markers.put(mkr4.getId(), 4);
 
 
         //shs building b
-        LatLng shs_b = new LatLng(13.793341, 121.002542);
+        LatLng shs_b = new LatLng(13.7935735,121.0024519);
         MarkerOptions shs_b_M = new MarkerOptions()
                 .position(shs_b)
                 .title("SHS Building B")
                 .snippet("HUMSS & ABM")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr5 = mMap.addMarker(shs_b_M);
         markers.put(mkr5.getId(), 5);
@@ -271,7 +271,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions shsclassrooms_M = new MarkerOptions()
                 .position(shsclassrooms)
                 .title("SHS Classrooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr6 = mMap.addMarker(shsclassrooms_M);
         markers.put(mkr6.getId(), 6);
@@ -281,7 +281,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions beauty_M = new MarkerOptions()
                 .position(beauty)
                 .title("Beauty Care Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("beauty",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("beauty",100,100)));
 
         Marker mkr7 = mMap.addMarker(beauty_M);
         markers.put(mkr7.getId(), 7);
@@ -291,7 +291,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions cookery_M = new MarkerOptions()
                 .position(cookery)
                 .title("Cookery Rooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",100,100)));
 
         Marker mkr8 = mMap.addMarker(cookery_M);
         markers.put(mkr8.getId(), 8);
@@ -302,7 +302,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions guidance_M = new MarkerOptions()
                 .position(guidance)
                 .title("Guidance Office")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",100,100)));
 
         Marker mkr9 = mMap.addMarker(guidance_M);
         markers.put(mkr9.getId(), 9);
@@ -312,7 +312,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions he_M = new MarkerOptions()
                 .position(he)
                 .title("H.E Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr10 = mMap.addMarker(he_M);
         markers.put(mkr10.getId(), 10);
@@ -323,7 +323,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions canteen_M = new MarkerOptions()
                 .position(canteen)
                 .title("Canteen")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",100,100)));
 
         Marker mkr11 = mMap.addMarker(canteen_M);
         markers.put(mkr11.getId(), 11);
@@ -333,7 +333,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions tvl_M = new MarkerOptions()
                 .position(tvl)
                 .title("TVL Classroom")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr12 = mMap.addMarker(tvl_M);
         markers.put(mkr12.getId(), 12);
@@ -344,7 +344,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions science_M = new MarkerOptions()
                 .position(science)
                 .title("Science Park")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",100,100)));
 
         Marker mkr13 = mMap.addMarker(science_M);
         markers.put(mkr13.getId(), 13);
@@ -354,7 +354,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions stve_M = new MarkerOptions()
                 .position(stve)
                 .title("STVE Classrooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr14 = mMap.addMarker(stve_M);
         markers.put(mkr14.getId(), 14);
@@ -364,7 +364,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions maingate_M = new MarkerOptions()
                 .position(maingate)
                 .title("Main Gate")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gate",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gate",100,100)));
 
         Marker mkr15 = mMap.addMarker(maingate_M);
         markers.put(mkr15.getId(), 15);
@@ -375,7 +375,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions gate_M = new MarkerOptions()
                 .position(gate)
                 .title("Gate")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gate",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gate",100,100)));
 
         Marker mkr16 = mMap.addMarker(gate_M);
         markers.put(mkr16.getId(), 16);
@@ -386,7 +386,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(shs_a)
                 .title("SHS Building A")
                 .snippet("STEM")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr17 = mMap.addMarker(shs_a_M);
         markers.put(mkr17.getId(), 17);
@@ -396,7 +396,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions gym_M = new MarkerOptions()
                 .position(gym)
                 .title("Gymnasium")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gym",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gym",100,100)));
 
         Marker mkr18 = mMap.addMarker(gym_M);
         markers.put(mkr18.getId(), 18);
@@ -407,7 +407,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions g10buildinga_M = new MarkerOptions()
                 .position(g10buildinga)
                 .title("Grade 10 Building A")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr19 = mMap.addMarker(g10buildinga_M);
         markers.put(mkr19.getId(), 19);
@@ -417,7 +417,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions electricity_M = new MarkerOptions()
                 .position(electricity)
                 .title("Electricity Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("electric",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("electric",100,100)));
 
         Marker mkr20 = mMap.addMarker(electricity_M);
         markers.put(mkr20.getId(), 20);
@@ -427,7 +427,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions g10buildingb_M = new MarkerOptions()
                 .position(g10buildingb)
                 .title("Grade 10 Building B")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr21 = mMap.addMarker(g10buildingb_M);
         markers.put(mkr21.getId(), 21);
@@ -438,7 +438,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions g8rooms_M = new MarkerOptions()
                 .position(g8rooms)
                 .title("Grade 8 Classrooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr22 = mMap.addMarker(g8rooms_M);
         markers.put(mkr22.getId(), 22);
@@ -451,26 +451,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(main)
                 .title("Main Building")
                 .snippet("Grade 9 & Grade 7")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",140,140)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
 
         Marker mkr23 = mMap.addMarker(main_M);
         markers.put(mkr23.getId(), 23);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -491,8 +475,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //
         //get latlong for corners for specified city
 
-        LatLng one = new LatLng(13.791816, 121.002222);//SW
-        LatLng two = new LatLng(13.793309, 121.003593);//NE
+        LatLng one = new LatLng(13.7916692,121.0014455);//SW
+        LatLng two = new LatLng(13.7936997,121.0038988);//NE
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
 
@@ -585,7 +569,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                                     mOrigin = userloc;
                                     mDestination = MarkerPos;
-                                    drawRoute();
+
 
 
                                 } catch (IOException e) {
@@ -635,17 +619,342 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926088, 121.0025078),
-                                new LatLng(13.792777, 121.002497),
-                                new LatLng(13.792812, 121.002367),
-                                new LatLng(13.792991, 121.002333),
-                                new LatLng(13.792886, 121.002179),
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7929594,121.00234),
+                                new LatLng(13.7928543,121.0021602),
                                 new LatLng(13.792933, 121.002053))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
 
                 mMarkerPoints.clear();
+
+                //admin bldg - shs building b
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 5 || mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7930222,121.0023341),
+                                new LatLng(13.7930876,121.0025171),
+                                new LatLng(13.7935735,121.0024519))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+
+                //admin bldg - poolside
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 4 || mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7930222,121.0023341),
+                                new LatLng(13.7930876,121.0025171),
+                                new LatLng(13.793341, 121.002542))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+
+
+                //admin bldg - shs classrooms
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 6 || mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7930222,121.0023341),
+                                new LatLng(13.7930876,121.0025171),
+                                new LatLng(13.7932733,121.0023886))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+
+
+                //admin bldg - beauty care
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 7 || mMarkerPoints.get(0) == 7 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7930222,121.0023341),
+                                new LatLng(13.7930876,121.0025171))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - cookery
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 8 || mMarkerPoints.get(0) == 8 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7930222,121.0023341),
+                                new LatLng(13.7930876,121.0025171),
+                                new LatLng(13.7931182,121.0026665))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - canteen
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 11 || mMarkerPoints.get(0) == 11 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7926653,121.0023703),
+                                new LatLng(13.7927289,121.0026057))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - tvl classroom
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 12 || mMarkerPoints.get(0) == 12 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7926653,121.0023703),
+                                new LatLng(13.7926226,121.0026481))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - guidance
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 9 || mMarkerPoints.get(0) == 9 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7926653,121.0023703),
+                                new LatLng(13.7927234,121.0025613),
+                                new LatLng(13.7928348,121.0025863))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - h.e room
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 10 || mMarkerPoints.get(0) == 10 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.7926653,121.0023703),
+                                new LatLng(13.7927234,121.0025613),
+                                new LatLng(13.7928348,121.0025863))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+
+                //admin bldg - shs building a
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 17 || mMarkerPoints.get(0) == 17 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.79264012781666, 121.0023789848412),
+                                new LatLng(13.7925995,121.0020713))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+
+                //admin bldg - gym
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 18 || mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.79227004348421, 121.00232621646784),
+                                new LatLng(13.792285336671819, 121.00225031661394))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+
+                //admin bldg - electric
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7921697,121.0024995),
+                                new LatLng(13.792075,121.0027812),
+                                new LatLng(13.7919033,121.0027801))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - g8 classrooms
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7921697,121.0024995),
+                                new LatLng(13.7919995,121.0025903),
+                                new LatLng(13.791901,121.0023677))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+
+                //admin bldg - g10 building a
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 19 || mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7921697,121.0024995),
+                                new LatLng(13.7920935,121.0024609),
+                                new LatLng(13.7920698,121.002338))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - science park
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 13 || mMarkerPoints.get(0) == 13 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7921697,121.0024995),
+                                new LatLng(13.7921895,121.0026105),
+                                new LatLng(13.7922604,121.0026845))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - stve
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 14 || mMarkerPoints.get(0) == 14 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7921697,121.0024995),
+                                new LatLng(13.7920773,121.0028928),
+                                new LatLng(13.79221,121.0036171),
+                                new LatLng(13.7922672,121.0037836))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+
+                //admin bldg - main bulding
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7921697,121.0024995),
+                                new LatLng(13.7920773,121.0028928),
+                                new LatLng(13.7921469,121.0031955),
+                                new LatLng(13.7924435,121.0032114))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+
+                //admin bldg - gate
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 16 || mMarkerPoints.get(0) == 16 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.792444,121.0024047),
+                                new LatLng(13.7933741,121.0022825),
+                                new LatLng(13.7933453,121.0017203))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+                //admin bldg - main gate
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 15 || mMarkerPoints.get(0) == 15 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7921697,121.0024995),
+                                new LatLng(13.7920773,121.0028928),
+                                new LatLng(13.79221,121.0036171),
+                                new LatLng(13.7922539,121.0038847),
+                                new LatLng(13.79221781663594, 121.003935301053))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
+
+                //admin bldg - g10 building b
+            } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 1) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792353,121.0024724),
+                                new LatLng(13.7924935,121.0024029),
+                                new LatLng(13.7924609,121.0022389),
+                                new LatLng(13.7924154,121.0018621),
+                                new LatLng(13.7920825,121.0018384),
+                                new LatLng(13.7919818,121.0017186))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+
 
 
 
