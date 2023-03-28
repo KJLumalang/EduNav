@@ -613,16 +613,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 mMarkerPoints.clear();
 
-            //admin bldg - field
+                //admin bldg - field
             } else if (mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 3 || mMarkerPoints.get(0) == 3 && mMarkerPoints.get(1) == 1) {
 
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7929594,121.00234),
-                                new LatLng(13.7928543,121.0021602),
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7929594, 121.00234),
+                                new LatLng(13.7928543, 121.0021602),
                                 new LatLng(13.792933, 121.002053))
                         .color(Color.BLUE)
                         .width(20)
@@ -636,11 +636,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7930222,121.0023341),
-                                new LatLng(13.7930876,121.0025171),
-                                new LatLng(13.7935735,121.0024519))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7930222, 121.0023341),
+                                new LatLng(13.7930876, 121.0025171),
+                                new LatLng(13.7935735, 121.0024519))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -653,10 +653,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7930222,121.0023341),
-                                new LatLng(13.7930876,121.0025171),
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7930222, 121.0023341),
+                                new LatLng(13.7930876, 121.0025171),
                                 new LatLng(13.793341, 121.002542))
                         .color(Color.BLUE)
                         .width(20)
@@ -671,11 +671,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7930222,121.0023341),
-                                new LatLng(13.7930876,121.0025171),
-                                new LatLng(13.7932733,121.0023886))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7930222, 121.0023341),
+                                new LatLng(13.7930876, 121.0025171),
+                                new LatLng(13.7932733, 121.0023886))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -689,10 +689,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7930222,121.0023341),
-                                new LatLng(13.7930876,121.0025171))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7930222, 121.0023341),
+                                new LatLng(13.7930876, 121.0025171))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -704,11 +704,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7930222,121.0023341),
-                                new LatLng(13.7930876,121.0025171),
-                                new LatLng(13.7931182,121.0026665))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7930222, 121.0023341),
+                                new LatLng(13.7930876, 121.0025171),
+                                new LatLng(13.7931182, 121.0026665))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -720,10 +720,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7926653,121.0023703),
-                                new LatLng(13.7927289,121.0026057))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7926653, 121.0023703),
+                                new LatLng(13.7927289, 121.0026057))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -735,10 +735,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7926653,121.0023703),
-                                new LatLng(13.7926226,121.0026481))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7926653, 121.0023703),
+                                new LatLng(13.7926226, 121.0026481))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -750,11 +750,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7926653,121.0023703),
-                                new LatLng(13.7927234,121.0025613),
-                                new LatLng(13.7928348,121.0025863))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7926653, 121.0023703),
+                                new LatLng(13.7927234, 121.0025613),
+                                new LatLng(13.7928348, 121.0025863))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -766,11 +766,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
-                                new LatLng(13.7926653,121.0023703),
-                                new LatLng(13.7927234,121.0025613),
-                                new LatLng(13.7928348,121.0025863))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
+                                new LatLng(13.7926653, 121.0023703),
+                                new LatLng(13.7927234, 121.0025613),
+                                new LatLng(13.7928348, 121.0025863))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -783,10 +783,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
                                 new LatLng(13.79264012781666, 121.0023789848412),
-                                new LatLng(13.7925995,121.0020713))
+                                new LatLng(13.7925995, 121.0020713))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -799,8 +799,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792411,121.002414),
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792411, 121.002414),
                                 new LatLng(13.79227004348421, 121.00232621646784),
                                 new LatLng(13.792285336671819, 121.00225031661394))
                         .color(Color.BLUE)
@@ -815,10 +815,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7921697,121.0024995),
-                                new LatLng(13.792075,121.0027812),
-                                new LatLng(13.7919033,121.0027801))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7921697, 121.0024995),
+                                new LatLng(13.792075, 121.0027812),
+                                new LatLng(13.7919033, 121.0027801))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -830,10 +830,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7921697,121.0024995),
-                                new LatLng(13.7919995,121.0025903),
-                                new LatLng(13.791901,121.0023677))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7921697, 121.0024995),
+                                new LatLng(13.7919995, 121.0025903),
+                                new LatLng(13.791901, 121.0023677))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -846,10 +846,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7921697,121.0024995),
-                                new LatLng(13.7920935,121.0024609),
-                                new LatLng(13.7920698,121.002338))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7921697, 121.0024995),
+                                new LatLng(13.7920935, 121.0024609),
+                                new LatLng(13.7920698, 121.002338))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -861,10 +861,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7921697,121.0024995),
-                                new LatLng(13.7921895,121.0026105),
-                                new LatLng(13.7922604,121.0026845))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7921697, 121.0024995),
+                                new LatLng(13.7921895, 121.0026105),
+                                new LatLng(13.7922604, 121.0026845))
 
                         .color(Color.BLUE)
                         .width(20)
@@ -877,11 +877,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7921697,121.0024995),
-                                new LatLng(13.7920773,121.0028928),
-                                new LatLng(13.79221,121.0036171),
-                                new LatLng(13.7922672,121.0037836))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7921697, 121.0024995),
+                                new LatLng(13.7920773, 121.0028928),
+                                new LatLng(13.79221, 121.0036171),
+                                new LatLng(13.7922672, 121.0037836))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -894,11 +894,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7921697,121.0024995),
-                                new LatLng(13.7920773,121.0028928),
-                                new LatLng(13.7921469,121.0031955),
-                                new LatLng(13.7924435,121.0032114))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7921697, 121.0024995),
+                                new LatLng(13.7920773, 121.0028928),
+                                new LatLng(13.7921469, 121.0031955),
+                                new LatLng(13.7924435, 121.0032114))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -911,10 +911,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.792444,121.0024047),
-                                new LatLng(13.7933741,121.0022825),
-                                new LatLng(13.7933453,121.0017203))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.792444, 121.0024047),
+                                new LatLng(13.7933741, 121.0022825),
+                                new LatLng(13.7933453, 121.0017203))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -926,11 +926,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7921697,121.0024995),
-                                new LatLng(13.7920773,121.0028928),
-                                new LatLng(13.79221,121.0036171),
-                                new LatLng(13.7922539,121.0038847),
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7921697, 121.0024995),
+                                new LatLng(13.7920773, 121.0028928),
+                                new LatLng(13.79221, 121.0036171),
+                                new LatLng(13.7922539, 121.0038847),
                                 new LatLng(13.79221781663594, 121.003935301053))
                         .color(Color.BLUE)
                         .width(20)
@@ -944,19 +944,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.792353,121.0024724),
-                                new LatLng(13.7924935,121.0024029),
-                                new LatLng(13.7924609,121.0022389),
-                                new LatLng(13.7924154,121.0018621),
-                                new LatLng(13.7920825,121.0018384),
-                                new LatLng(13.7919818,121.0017186))
+                                new LatLng(13.792353, 121.0024724),
+                                new LatLng(13.7924935, 121.0024029),
+                                new LatLng(13.7924609, 121.0022389),
+                                new LatLng(13.7924154, 121.0018621),
+                                new LatLng(13.7920825, 121.0018384),
+                                new LatLng(13.7919818, 121.0017186))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
                 mMarkerPoints.clear();
 
 
-            //start of tvl to all
+                //start of tvl to all
 
                 //tvl - admin
                 //already exist
@@ -967,9 +967,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7925379,121.0027563),
-                                new LatLng(13.7923906,121.0028362),
-                                new LatLng(13.7923654,121.003036),
+                                new LatLng(13.7925379, 121.0027563),
+                                new LatLng(13.7923906, 121.0028362),
+                                new LatLng(13.7923654, 121.003036),
                                 new LatLng(13.792288, 121.003093))
                         .color(Color.BLUE)
                         .width(20)
@@ -981,10 +981,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792628039624304, 121.00238041890603),
-                                new LatLng(13.7929849,121.0023308),
-                                new LatLng(13.7928751,121.0021733),
+                                new LatLng(13.7929849, 121.0023308),
+                                new LatLng(13.7928751, 121.0021733),
                                 new LatLng(13.792933, 121.002053))
                         .color(Color.BLUE)
                         .width(20)
@@ -997,10 +997,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792628039624304, 121.00238041890603),
-                                new LatLng(13.7930208,121.0023293),
-                                new LatLng(13.7930832,121.0025107),
+                                new LatLng(13.7930208, 121.0023293),
+                                new LatLng(13.7930832, 121.0025107),
                                 new LatLng(13.793341, 121.002542))
                         .color(Color.BLUE)
                         .width(20)
@@ -1013,11 +1013,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792628039624304, 121.00238041890603),
-                                new LatLng(13.7930208,121.0023293),
-                                new LatLng(13.7930832,121.0025107),
-                                new LatLng(13.7935735,121.0024519))
+                                new LatLng(13.7930208, 121.0023293),
+                                new LatLng(13.7930832, 121.0025107),
+                                new LatLng(13.7935735, 121.0024519))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1028,11 +1028,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792628039624304, 121.00238041890603),
-                                new LatLng(13.7930208,121.0023293),
-                                new LatLng(13.7930832,121.0025107),
-                                new LatLng(13.7932733,121.0023886))
+                                new LatLng(13.7930208, 121.0023293),
+                                new LatLng(13.7930832, 121.0025107),
+                                new LatLng(13.7932733, 121.0023886))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1043,10 +1043,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792628039624304, 121.00238041890603),
-                                new LatLng(13.7930208,121.0023293),
-                                new LatLng(13.7930832,121.0025107))
+                                new LatLng(13.7930208, 121.0023293),
+                                new LatLng(13.7930832, 121.0025107))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1057,11 +1057,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792628039624304, 121.00238041890603),
-                                new LatLng(13.7930208,121.0023293),
-                                new LatLng(13.7930832,121.0025107),
-                                new LatLng(13.79311,121.002678))
+                                new LatLng(13.7930208, 121.0023293),
+                                new LatLng(13.7930832, 121.0025107),
+                                new LatLng(13.79311, 121.002678))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1072,24 +1072,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
-                                new LatLng(13.7926575,121.0025103),
-                                new LatLng(13.7928454,121.0025115))
+                                new LatLng(13.7926587, 121.0027003),
+                                new LatLng(13.7926575, 121.0025103),
+                                new LatLng(13.7928454, 121.0025115))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
                 mMarkerPoints.clear();
 
 
-            //tvl - he
+                //tvl - he
             } else if (mMarkerPoints.get(0) == 12 && mMarkerPoints.get(1) == 10 || mMarkerPoints.get(0) == 10 && mMarkerPoints.get(1) == 12) {
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
-                                new LatLng(13.7926575,121.0025103),
-                                new LatLng(13.7928454,121.0025115),
-                                new LatLng(13.7928607,121.0026429))
+                                new LatLng(13.7926587, 121.0027003),
+                                new LatLng(13.7926575, 121.0025103),
+                                new LatLng(13.7928454, 121.0025115),
+                                new LatLng(13.7928607, 121.0026429))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1100,23 +1100,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
-                                new LatLng(13.7926575,121.0025103),
-                                new LatLng(13.7927461,121.0026593))
+                                new LatLng(13.7926587, 121.0027003),
+                                new LatLng(13.7926575, 121.0025103),
+                                new LatLng(13.7927461, 121.0026593))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
                 mMarkerPoints.clear();
 
-            //tvl - science
+                //tvl - science
             } else if (mMarkerPoints.get(0) == 12 && mMarkerPoints.get(1) == 13 || mMarkerPoints.get(0) == 13 && mMarkerPoints.get(1) == 12) {
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7921713,121.0024783),
-                                new LatLng(13.7922604,121.0026845))
+                                new LatLng(13.7921713, 121.0024783),
+                                new LatLng(13.7922604, 121.0026845))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1127,11 +1127,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7921713,121.0024783),
-                                new LatLng(13.7920644,121.0027939),
-                                new LatLng(13.7922652,121.0037217))
+                                new LatLng(13.7921713, 121.0024783),
+                                new LatLng(13.7920644, 121.0027939),
+                                new LatLng(13.7922652, 121.0037217))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1143,11 +1143,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7921713,121.0024783),
-                                new LatLng(13.7920644,121.0027939),
-                                new LatLng(13.7922493,121.0038734),
+                                new LatLng(13.7921713, 121.0024783),
+                                new LatLng(13.7920644, 121.0027939),
+                                new LatLng(13.7922493, 121.0038734),
                                 new LatLng(13.792206999212251, 121.00394013713252))
                         .color(Color.BLUE)
                         .width(20)
@@ -1160,11 +1160,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.793397,121.002277),
-                                new LatLng(13.7933308,121.0017443),
-                                new LatLng(13.7934088,121.0017222))
+                                new LatLng(13.793397, 121.002277),
+                                new LatLng(13.7933308, 121.0017443),
+                                new LatLng(13.7934088, 121.0017222))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1175,9 +1175,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7925697,121.0020829))
+                                new LatLng(13.7925697, 121.0020829))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1188,10 +1188,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7923352,121.0024202),
-                                new LatLng(13.7922676,121.0022619))
+                                new LatLng(13.7923352, 121.0024202),
+                                new LatLng(13.7922676, 121.0022619))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1203,10 +1203,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7921604,121.002495),
-                                new LatLng(13.7920477,121.0023503))
+                                new LatLng(13.7921604, 121.002495),
+                                new LatLng(13.7920477, 121.0023503))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1218,11 +1218,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7921604,121.002495),
-                                new LatLng(13.7920739,121.0027725),
-                                new LatLng(13.7918703,121.0027764))
+                                new LatLng(13.7921604, 121.002495),
+                                new LatLng(13.7920739, 121.0027725),
+                                new LatLng(13.7918703, 121.0027764))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1234,13 +1234,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.7924935,121.0024029),
-                                new LatLng(13.7924609,121.0022389),
-                                new LatLng(13.7924154,121.0018621),
-                                new LatLng(13.7920825,121.0018384),
-                                new LatLng(13.7919818,121.0017186))
+                                new LatLng(13.7924935, 121.0024029),
+                                new LatLng(13.7924609, 121.0022389),
+                                new LatLng(13.7924154, 121.0018621),
+                                new LatLng(13.7920825, 121.0018384),
+                                new LatLng(13.7919818, 121.0017186))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1252,12 +1252,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7926587,121.0027003),
+                                new LatLng(13.7926587, 121.0027003),
                                 new LatLng(13.792638045570444, 121.00237803828715),
-                                new LatLng(13.792193,121.0025003),
-                                new LatLng(13.7920046,121.0025812),
-                                new LatLng(13.7919026,121.0024627),
-                                new LatLng(13.7919009,121.0023125))
+                                new LatLng(13.792193, 121.0025003),
+                                new LatLng(13.7920046, 121.0025812),
+                                new LatLng(13.7919026, 121.0024627),
+                                new LatLng(13.7919009, 121.0023125))
 
                         .color(Color.BLUE)
                         .width(20)
@@ -1269,10 +1269,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
-                                new LatLng(13.7925333,121.0027686),
-                                new LatLng(13.7923796,121.0028705),
-                                new LatLng(13.792411,121.0032002),
-                                new LatLng(13.7924923,121.0032087))
+                                new LatLng(13.7925333, 121.0027686),
+                                new LatLng(13.7923796, 121.0028705),
+                                new LatLng(13.792411, 121.0032002),
+                                new LatLng(13.7924923, 121.0032087))
 
                         .color(Color.BLUE)
                         .width(20)
@@ -1280,13 +1280,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 mMarkerPoints.clear();
 
 
-
-        //start of rizal park to all
+                //start of rizal park to all
 
                 //rizal park - admin
                 //already exist
-
-
 
 
                 //rizal park - field
@@ -1296,28 +1293,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7929733,121.0023292),
-                                new LatLng(13.792887,121.002181),
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7929733, 121.0023292),
+                                new LatLng(13.792887, 121.002181),
                                 new LatLng(13.792933, 121.002053))
-                                .color(Color.BLUE)
-                                .width(20)
-                                .pattern(PATTERN_POLYGON_ALPHA)));
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
                 mMarkerPoints.clear();
 
 
                 //rizal park - poolside
-            }  else if (mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 4 || mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 2) {
+            } else if (mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 4 || mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 2) {
 
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7930298,121.0023394),
-                                new LatLng(13.7931268,121.0025579),
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7930298, 121.0023394),
+                                new LatLng(13.7931268, 121.0025579),
                                 new LatLng(13.793341, 121.002542))
                         .color(Color.BLUE)
                         .width(20)
@@ -1327,22 +1324,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
             //rizal park - shs building b
-         else if (mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 5 || mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 2) {
+            else if (mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 5 || mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 2) {
 
-            polylines.add(this.mMap.addPolyline(new PolylineOptions()
-                    .clickable(true)
-                    .add(
-                            new LatLng(13.792288, 121.003093),
-                            new LatLng(13.7921221,121.0031098),
-                            new LatLng(13.7921878,121.0024778),
-                            new LatLng(13.7930298,121.0023394),
-                            new LatLng(13.7931268,121.0025579),
-                            new LatLng(13.7935735,121.0024519))
-                    .color(Color.BLUE)
-                    .width(20)
-                    .pattern(PATTERN_POLYGON_ALPHA)));
-            mMarkerPoints.clear();
-        }
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792288, 121.003093),
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7930298, 121.0023394),
+                                new LatLng(13.7931268, 121.0025579),
+                                new LatLng(13.7935735, 121.0024519))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
             //rizal park - shs classrooms
             else if (mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 6 || mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 2) {
 
@@ -1350,11 +1347,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7930298,121.0023394),
-                                new LatLng(13.7931268,121.0025579),
-                                new LatLng(13.7932733,121.0023886))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7930298, 121.0023394),
+                                new LatLng(13.7931268, 121.0025579),
+                                new LatLng(13.7932733, 121.0023886))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1368,11 +1365,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7930298,121.0023394),
-                                new LatLng(13.7931268,121.0025579),
-                                new LatLng(13.7930047,121.0025058))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7930298, 121.0023394),
+                                new LatLng(13.7931268, 121.0025579),
+                                new LatLng(13.7930047, 121.0025058))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1385,11 +1382,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7930298,121.0023394),
-                                new LatLng(13.7931268,121.0025579),
-                                new LatLng(13.7930606,121.0026786))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7930298, 121.0023394),
+                                new LatLng(13.7931268, 121.0025579),
+                                new LatLng(13.7930606, 121.0026786))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1403,10 +1400,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7926137,121.0023899),
-                                new LatLng(13.7929052,121.0025095))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7926137, 121.0023899),
+                                new LatLng(13.7929052, 121.0025095))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1420,10 +1417,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7926137,121.0023899),
-                                new LatLng(13.7928834,121.0026764))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7926137, 121.0023899),
+                                new LatLng(13.7928834, 121.0026764))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1437,10 +1434,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921878,121.0024778),
-                                new LatLng(13.7926137,121.0023899),
-                                new LatLng(13.7927337,121.0026818))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7926137, 121.0023899),
+                                new LatLng(13.7927337, 121.0026818))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1458,9 +1455,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7921546,121.0025742),
-                                new LatLng(13.7922604,121.0026845))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7921546, 121.0025742),
+                                new LatLng(13.7922604, 121.0026845))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1474,8 +1471,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7922662,121.0037485))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7922662, 121.0037485))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1489,8 +1486,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7922538,121.0039031),
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7922538, 121.0039031),
                                 new LatLng(13.79221722217941, 121.00393419387413))
                         .color(Color.BLUE)
                         .width(20)
@@ -1505,11 +1502,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7920832,121.0026845),
-                                new LatLng(13.7923624,121.0024102),
-                                new LatLng(13.7933993,121.0022835),
-                                new LatLng(13.7933603,121.0017306))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920832, 121.0026845),
+                                new LatLng(13.7923624, 121.0024102),
+                                new LatLng(13.7933993, 121.0022835),
+                                new LatLng(13.7933603, 121.0017306))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1523,10 +1520,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7920832,121.0026845),
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920832, 121.0026845),
                                 new LatLng(13.792634683383765, 121.00238906138188),
-                                new LatLng(13.7925778,121.0020911))
+                                new LatLng(13.7925778, 121.0020911))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1540,10 +1537,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7920832,121.0026845),
-                                new LatLng(13.7923518,121.0024227),
-                                new LatLng(13.7922619,121.0022435))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920832, 121.0026845),
+                                new LatLng(13.7923518, 121.0024227),
+                                new LatLng(13.7922619, 121.0022435))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1557,10 +1554,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7920832,121.0026845),
-                                new LatLng(13.792169,121.0025045),
-                                new LatLng(13.7920434,121.0023425))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920832, 121.0026845),
+                                new LatLng(13.792169, 121.0025045),
+                                new LatLng(13.7920434, 121.0023425))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1574,9 +1571,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7920769,121.0027835),
-                                new LatLng(13.7918929,121.0027737))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920769, 121.0027835),
+                                new LatLng(13.7918929, 121.0027737))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1590,13 +1587,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7920832,121.0026845),
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920832, 121.0026845),
                                 new LatLng(13.792634683383765, 121.00238906138188),
-                                new LatLng(13.792463,121.002317),
-                                new LatLng(13.7924243,121.001855),
-                                new LatLng(13.7920727,121.0018269),
-                                new LatLng(13.791917,121.001679))
+                                new LatLng(13.792463, 121.002317),
+                                new LatLng(13.7924243, 121.001855),
+                                new LatLng(13.7920727, 121.0018269),
+                                new LatLng(13.791917, 121.001679))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1610,11 +1607,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7921221,121.0031098),
-                                new LatLng(13.7920832,121.0026845),
-                                new LatLng(13.7920034,121.002549),
-                                new LatLng(13.7919163,121.0024591),
-                                new LatLng(13.7919091,121.0023413))
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920832, 121.0026845),
+                                new LatLng(13.7920034, 121.002549),
+                                new LatLng(13.7919163, 121.0024591),
+                                new LatLng(13.7919091, 121.0023413))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1628,7 +1625,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792288, 121.003093),
-                                new LatLng(13.7925991,121.0031756))
+                                new LatLng(13.7925991, 121.0031756))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1650,9 +1647,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7930718,121.0025107),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7930718, 121.0025107),
                                 new LatLng(13.793341, 121.002542))
                         .color(Color.BLUE)
                         .width(20)
@@ -1667,10 +1664,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7930718,121.0025107),
-                                new LatLng(13.7935735,121.0024519))
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7930718, 121.0025107),
+                                new LatLng(13.7935735, 121.0024519))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1684,10 +1681,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7930718,121.0025107),
-                                new LatLng(13.7932733,121.0023886))
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7930718, 121.0025107),
+                                new LatLng(13.7932733, 121.0023886))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1702,9 +1699,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7930718,121.0025107))
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7930718, 121.0025107))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1718,10 +1715,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7930718,121.0025107),
-                                new LatLng(13.7930606,121.0026786))
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7930718, 121.0025107),
+                                new LatLng(13.7930606, 121.0026786))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1736,10 +1733,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7928394,121.0025175))
+                                new LatLng(13.7928394, 121.0025175))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1753,10 +1750,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7928834,121.0026764))
+                                new LatLng(13.7928834, 121.0026764))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1770,10 +1767,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7927337,121.0026818))
+                                new LatLng(13.7927337, 121.0026818))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1787,10 +1784,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7926548,121.0026965))
+                                new LatLng(13.7926548, 121.0026965))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1804,11 +1801,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7921619,121.0025128),
-                                new LatLng(13.7922604,121.0026845))
+                                new LatLng(13.7921619, 121.0025128),
+                                new LatLng(13.7922604, 121.0026845))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1822,12 +1819,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7921619,121.0025128),
-                                new LatLng(13.7920838,121.0029532),
-                                new LatLng(13.7922597,121.0037366))
+                                new LatLng(13.7921619, 121.0025128),
+                                new LatLng(13.7920838, 121.0029532),
+                                new LatLng(13.7922597, 121.0037366))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1841,12 +1838,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7921619,121.0025128),
-                                new LatLng(13.7920838,121.0029532),
-                                new LatLng(13.7922308,121.0039476))
+                                new LatLng(13.7921619, 121.0025128),
+                                new LatLng(13.7920838, 121.0029532),
+                                new LatLng(13.7922308, 121.0039476))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1860,8 +1857,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7931696,121.0019427),
-                                new LatLng(13.7933722,121.0017209))
+                                new LatLng(13.7931696, 121.0019427),
+                                new LatLng(13.7933722, 121.0017209))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1875,7 +1872,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7925286,121.0020808))
+                                new LatLng(13.7925286, 121.0020808))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1890,10 +1887,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792933, 121.002053),
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7923427,121.0024247),
-                                new LatLng(13.7922465,121.0022611))
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7923427, 121.0024247),
+                                new LatLng(13.7922465, 121.0022611))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1909,10 +1906,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792933, 121.002053),
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7921696,121.0024971),
-                                new LatLng(13.7920551,121.0023364))
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7921696, 121.0024971),
+                                new LatLng(13.7920551, 121.0023364))
 
                         .color(Color.BLUE)
                         .width(20)
@@ -1927,12 +1924,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7921619,121.0025128),
-                                new LatLng(13.7920704,121.0027859),
-                                new LatLng(13.7918754,121.0027736))
+                                new LatLng(13.7921619, 121.0025128),
+                                new LatLng(13.7920704, 121.0027859),
+                                new LatLng(13.7918754, 121.0027736))
 
                         .color(Color.BLUE)
                         .width(20)
@@ -1947,11 +1944,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7926335,121.0023164),
-                                new LatLng(13.7924711,121.0023337),
-                                new LatLng(13.7924135,121.0018604),
-                                new LatLng(13.7920795,121.0018321),
-                                new LatLng(13.791917,121.001679))
+                                new LatLng(13.7926335, 121.0023164),
+                                new LatLng(13.7924711, 121.0023337),
+                                new LatLng(13.7924135, 121.0018604),
+                                new LatLng(13.7920795, 121.0018321),
+                                new LatLng(13.791917, 121.001679))
 
                         .color(Color.BLUE)
                         .width(20)
@@ -1968,12 +1965,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792933, 121.002053),
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
-                                new LatLng(13.7921696,121.0024971),
-                                new LatLng(13.7919917,121.0025468),
-                                new LatLng(13.7919203,121.0024708),
-                                new LatLng(13.7918835,121.0023258))
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
+                                new LatLng(13.7921696, 121.0024971),
+                                new LatLng(13.7919917, 121.0025468),
+                                new LatLng(13.7919203, 121.0024708),
+                                new LatLng(13.7918835, 121.0023258))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -1987,17 +1984,1029 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .clickable(true)
                         .add(
                                 new LatLng(13.792933, 121.002053),
-                                new LatLng(13.7928966,121.0021911),
-                                new LatLng(13.793019,121.0023331),
+                                new LatLng(13.7928966, 121.0021911),
+                                new LatLng(13.793019, 121.0023331),
                                 new LatLng(13.79264635234936, 121.00237642772647),
-                                new LatLng(13.7921619,121.0025128),
-                                new LatLng(13.7921396,121.003196),
+                                new LatLng(13.7921619, 121.0025128),
+                                new LatLng(13.7921396, 121.003196),
+                                new LatLng(13.7925991, 121.0031756))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //start of poolside to all
+
+            //poolside - admin
+            //already exist
+
+            //poolside - rizal park
+            //already exist
+
+            //poolside - field
+            //already exist
+
+            //poolside - shs building b
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 5 || mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7935735, 121.0024519))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - shs classrooms
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 6 || mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7932733, 121.0023886))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - beauty
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 7 || mMarkerPoints.get(0) == 7 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930047, 121.0025058))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - cookery
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 8 || mMarkerPoints.get(0) == 8 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930606, 121.0026786))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - guidance
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 9 || mMarkerPoints.get(0) == 9 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7926588, 121.0023737),
+                                new LatLng(13.7926756, 121.0025271),
+                                new LatLng(13.792845, 121.0025156))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+
+            //poolside - guidance
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 9 || mMarkerPoints.get(0) == 9 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7926588, 121.0023737),
+                                new LatLng(13.7926756, 121.0025271),
+                                new LatLng(13.792845, 121.0025156))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - guidance
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 10 || mMarkerPoints.get(0) == 10 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7926588, 121.0023737),
+                                new LatLng(13.7926756, 121.0025271),
+                                new LatLng(13.7928834, 121.0026764))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - canteen
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 11 || mMarkerPoints.get(0) == 11 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7926588, 121.0023737),
+                                new LatLng(13.7926756, 121.0025271),
+                                new LatLng(13.7927337, 121.0026818))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - tvl
+            //already exist
+
+            //poolside - science park
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 13 || mMarkerPoints.get(0) == 13 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7922947, 121.0024394),
+                                new LatLng(13.7921375, 121.0025974),
+                                new LatLng(13.7922604, 121.0026845))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - science park
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 14 || mMarkerPoints.get(0) == 14 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7922947, 121.0024394),
+                                new LatLng(13.7920673, 121.0027424),
+                                new LatLng(13.7922584, 121.003732))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - main gate
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 15 || mMarkerPoints.get(0) == 15 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7922947, 121.0024394),
+                                new LatLng(13.7920673, 121.0027424),
+                                new LatLng(113.792227845415418, 121.00394145389237))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - gate
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 16 || mMarkerPoints.get(0) == 16 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7933958, 121.0022815),
+                                new LatLng(13.7933558, 121.0017295))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //poolside - shs building a
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 17 || mMarkerPoints.get(0) == 17 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.792630372969306, 121.00238115704053),
+                                new LatLng(13.79259619550618, 121.00210819541388))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+
+            //poolside - gym
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 18 || mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 4) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+
+                            new LatLng(13.793341, 121.002542),
+                            new LatLng(13.7930604, 121.0024802),
+                            new LatLng(13.7930226, 121.0023349),
+                            new LatLng(13.7923444, 121.0024198),
+                            new LatLng(13.7922551, 121.0022542))
+
+                    .color(Color.BLUE)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+
+            mMarkerPoints.clear();
+            }
+
+
+            //poolside - grade 10 bulding a
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 19 || mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7923444, 121.0024198),
+                                new LatLng(13.7920721,121.0023534))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+            }
+
+            //poolside - electricity
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7923444, 121.0024198),
+                                new LatLng(13.7920694,121.0027845),
+                                new LatLng(13.7918212,121.0027778))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+            }
+
+            //poolside - grade 10 building b
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7924741,121.0023871),
+                                new LatLng(13.792419,121.0018621),
+                                new LatLng(13.791917,121.001679))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+            }
+
+
+            //poolside - grade 8 classrooms
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604, 121.0024802),
+                                new LatLng(13.7930226, 121.0023349),
+                                new LatLng(13.7921901,121.0024701),
+                                new LatLng(13.7919986,121.0025622),
+                                new LatLng(13.7919228,121.0024657),
+                                new LatLng(3.7918133,121.002288))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+
+                mMarkerPoints.clear();
+            }
+
+
+            //poolside - main building
+            else if (mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 4) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.793341, 121.002542),
+                                new LatLng(13.7930604,121.0024802),
+                                new LatLng(13.7930226,121.0023349),
+                                new LatLng(13.7922947,121.0024394),
+                                new LatLng(13.7920673,121.0027424),
+                                new LatLng(13.7921485,121.0031984),
                                 new LatLng(13.7925991,121.0031756))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
                 mMarkerPoints.clear();
             }
+
+//start of shs building b to all
+
+            //admin, rizal, field , poolside already exist
+
+
+            //shs building b - shs classrooms
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 6 || mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7932733,121.0023886))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - beauty
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 7 || mMarkerPoints.get(0) == 7 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930047,121.0025058))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - cookery
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 8 || mMarkerPoints.get(0) == 8 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7932185,121.0024819),
+                                new LatLng(13.7930606,121.0026786))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - guidance
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 9 || mMarkerPoints.get(0) == 9 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.792671011031544, 121.00237734987955),
+                                new LatLng(13.792721902923642, 121.00252619776028),
+                                new LatLng(13.7929052,121.0025095))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - he
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 10 || mMarkerPoints.get(0) == 10 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.792671011031544, 121.00237734987955),
+                                new LatLng(13.792721902923642, 121.00252619776028),
+                                new LatLng(13.7928834,121.0026764))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - canteen
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 11 || mMarkerPoints.get(0) == 11 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.792671011031544, 121.00237734987955),
+                                new LatLng(13.792721902923642, 121.00252619776028),
+                                new LatLng(13.7927337,121.0026818))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - tvl already exist
+
+            //shs building b - science park
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 13 || mMarkerPoints.get(0) == 13 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7922001,121.0024601),
+                                new LatLng(13.7920909,121.0026506),
+                                new LatLng(13.7922604,121.0026845))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - stve
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 14 || mMarkerPoints.get(0) == 14 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7922001,121.0024601),
+                                new LatLng(13.7920909,121.0026506),
+                                new LatLng(13.7922441,121.0037366))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - main gate
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 15 || mMarkerPoints.get(0) == 15 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7922001,121.0024601),
+                                new LatLng(13.7920909,121.0026506),
+                                new LatLng(13.7922441,121.0037366),
+                                new LatLng(13.7922103,121.0039427))
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - gate
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 16 || mMarkerPoints.get(0) == 16 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7934011,121.002279),
+                                new LatLng(13.7933447,121.0017282))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - shs building a
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 17 || mMarkerPoints.get(0) == 17 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7926325,121.0023649),
+                                new LatLng(13.7925902,121.0020999))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - gym
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 18 || mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7923361,121.0024239),
+                                new LatLng(13.7922055,121.0022568))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - grade 10 building a
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 19 || mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7923361,121.0024239),
+                                new LatLng(13.7921422,121.0025099),
+                                new LatLng(13.7919917,121.0023384))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - electricity
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7923361,121.0024239),
+                                new LatLng(13.7921422,121.0025099),
+                                new LatLng(13.7920516,121.0027784),
+                                new LatLng(13.7918212,121.0027778))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+        //shs building b - grade 10 building b
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7924741,121.0023897),
+                                new LatLng(13.7924208,121.0018697),
+                                new LatLng(13.7920771,121.0018542),
+                                new LatLng(13.791917,121.001679))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - grade 8 classrooms
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7930589,121.00248),
+                                new LatLng(13.7930279,121.0023415),
+                                new LatLng(13.7921572,121.0024852),
+                                new LatLng(13.7919967,121.0025535),
+                                new LatLng(13.7919283,121.0024748),
+                                new LatLng(13.7918133,121.002288))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs building b - main building
+            else if (mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 5) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+
+                                new LatLng(13.7935735,121.0024519),
+                                new LatLng(13.7931268, 121.0025579),
+                                new LatLng(13.7930298, 121.0023394),
+                                new LatLng(13.7921878, 121.0024778),
+                                new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7925991,121.0031756))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //start of shs classrooms to all
+            //admin,rizal,field,poolside,shs building b already exist
+
+
+            //shs classrooms - beauty
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 7 || mMarkerPoints.get(0) == 7 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+
+                                new LatLng(13.7932733,121.0023886),
+                                new LatLng(13.7932216,121.0025134),
+                                new LatLng(13.7930822,121.0025178))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - cookery
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 8 || mMarkerPoints.get(0) == 8 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+
+                                new LatLng(13.7932733,121.0023886),
+                                new LatLng(13.7932216,121.0025134),
+                                new LatLng(13.7930606,121.0026786))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - guidance
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 9 || mMarkerPoints.get(0) == 9 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733,121.0023886),
+                                new LatLng(13.7932216,121.0025134),
+                                new LatLng(13.7930822,121.0025178),
+                                new LatLng(13.7930188,121.0023394),
+                                new LatLng(13.79264079697799, 121.00237362140093),
+                                new LatLng(13.792691735515653, 121.0025322532776),
+                                new LatLng(113.7929052,121.0025095))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - he
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 10 || mMarkerPoints.get(0) == 10 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733,121.0023886),
+                                new LatLng(13.7932216,121.0025134),
+                                new LatLng(13.7930822,121.0025178),
+                                new LatLng(13.7930188,121.0023394),
+                                new LatLng(13.79264079697799, 121.00237362140093),
+                                new LatLng(13.792691735515653, 121.0025322532776),
+                                new LatLng(13.7928834,121.0026764))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - canteen
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 11 || mMarkerPoints.get(0) == 11 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733,121.0023886),
+                                new LatLng(13.7932216,121.0025134),
+                                new LatLng(13.7930822,121.0025178),
+                                new LatLng(13.7930188,121.0023394),
+                                new LatLng(13.79264079697799, 121.00237362140093),
+                                new LatLng(13.792691735515653, 121.0025322532776),
+                                new LatLng(13.7927337,121.0026818))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - tvl already exist
+
+            //shs classrooms - science
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 13 || mMarkerPoints.get(0) == 13 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.7921908, 121.0024631),
+                                new LatLng(13.7922604, 121.0026845))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+
+            //shs classrooms - stve
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 14 || mMarkerPoints.get(0) == 14 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.7921908, 121.0024631),
+                                new LatLng(13.7920657,121.002852),
+                                new LatLng(13.7922356,121.0037265))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - main gate
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 15 || mMarkerPoints.get(0) == 15 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.7921908, 121.0024631),
+                                new LatLng(13.7920657,121.002852),
+                                new LatLng(13.792216851413919, 121.00394089180128))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - gate
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 16 || mMarkerPoints.get(0) == 16 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.7933973,121.0022839),
+                                new LatLng(13.7933516,121.001722))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - shs building a
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 17 || mMarkerPoints.get(0) == 17 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.792643766919056, 121.00235626045226),
+                                new LatLng(13.7925913,121.0021111))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - gym
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 18 || mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.792643766919056, 121.00235626045226),
+                                new LatLng(13.7923406,121.0023959),
+                                new LatLng(13.7922476,121.0022608))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - grade 10 building a
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 19 || mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.792643766919056, 121.00235626045226),
+                                new LatLng(13.7921441,121.0025192),
+                                new LatLng(13.7919917,121.0023384))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - electricity
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.792643766919056, 121.00235626045226),
+                                new LatLng(13.7921441,121.0025192),
+                                new LatLng(13.7920623,121.0027862),
+                                new LatLng(13.7918212,121.0027778))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - grade 10 building b
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.7924766,121.0023815),
+                                new LatLng(13.7924275,121.0018631),
+                                new LatLng(13.7920791,121.0018544),
+                                new LatLng(13.791917,121.001679))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //shs classrooms - grade 8 classrooms
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.7921637,121.0024959),
+                                new LatLng(13.7919917,121.0025469),
+                                new LatLng(13.7919354,121.002486),
+                                new LatLng(13.7918133,121.002288))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+
+            //shs classrooms - grade 8 classrooms
+            else if (mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 6) {
+
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7932733, 121.0023886),
+                                new LatLng(13.7932216, 121.0025134),
+                                new LatLng(13.7930822, 121.0025178),
+                                new LatLng(13.7930188, 121.0023394),
+                                new LatLng(13.7921637,121.0024959),
+                                new LatLng(13.7920674,121.0027376),
+                                new LatLng(13.7921307,121.0031976),
+                                new LatLng(13.7925991,121.0031756))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+
+
+
+
+
+
+
 
 
 
