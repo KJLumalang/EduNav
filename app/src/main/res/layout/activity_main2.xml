@@ -32,12 +32,14 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="335dp"
-            android:layout_height="76dp"
+            android:textColor="@color/browny"
+            android:layout_width="381dp"
+            android:layout_height="66dp"
             android:layout_marginBottom="188dp"
+            android:fontFamily="@font/hammersmith_one"
             android:text="BAUAN TECHNICAL INTEGRATED HIGH SCHOOL"
             android:textAlignment="center"
-            app:autoSizeTextType="uniform"
+            android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -28,26 +28,34 @@
                 app:srcCompat="@drawable/school_logo" />
 
             <TextView
+                android:textColor="@color/browny"
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:gravity="center"
                 android:text="Sections"
                 android:textSize="35dp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:textColor="@color/browny"
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#B08BC34A"
+                android:fontFamily="@font/hammersmith_one"
                 android:text="Grade 7"
                 android:textSize="25dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:textColor="@color/browny"
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:gravity="center"
                 android:text=" Maaasahan\nMaagap\nMaalalahanin\nMagalang\nMagiliw\nMagiting\nMaingat\nMalikhain\nMapagbigay\nMapagmahal\nMapagkumbaba\nMapamaraan\nMapitagan\nMarangal\n
 Masayahin\n
 Masigasig\n
@@ -62,19 +70,23 @@ Matipid\n
 Matiyaga\n
 Matulungin\n
 Maunawain"
-                android:textSize="17dp"
-                android:gravity="center"/>
+                android:textSize="17dp" />
 
             <TextView
+                android:textColor="@color/browny"
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#65673AB7"
+                android:fontFamily="@font/hammersmith_one"
                 android:text="Grade 8"
                 android:textSize="25dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:textColor="@color/browny"
                 android:id="@+id/textView11"
+                android:fontFamily="@font/adamina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Bougainvillea\n
@@ -107,13 +119,18 @@ Zinnia"
 
 
             <TextView
+                android:textColor="@color/browny"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#862196F3"
                 android:text="Grade 9"
+                android:fontFamily="@font/hammersmith_one"
                 android:textSize="25dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:textColor="@color/browny"
+                android:fontFamily="@font/adamina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Agoncillo\n
@@ -142,13 +159,18 @@ Zamora"
                 android:gravity="center"/>
 
             <TextView
+                android:textColor="@color/browny"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#85FF5722"
                 android:text="Grade 10"
+                android:fontFamily="@font/hammersmith_one"
                 android:textSize="25dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:textColor="@color/browny"
+                android:fontFamily="@font/adamina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Acacia\n
@@ -172,14 +194,20 @@ Tindalo\n
 Yakal"
                 android:textSize="17dp"
                 android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Grade 11"
-                android:textSize="25dp"
-                android:textStyle="bold"/>
 
             <TextView
+                android:textColor="@color/browny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#86FFEB3B"
+                android:text="Grade 11"
+                android:fontFamily="@font/hammersmith_one"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/browny"
+                android:fontFamily="@font/adamina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ABM I\n
@@ -210,14 +238,20 @@ HE - COMMERCIAL COOKING\n
 ICT - ANIMATION"
                 android:textSize="17dp"
                 android:gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Grade 12"
-                android:textSize="25dp"
-                android:textStyle="bold"/>
 
             <TextView
+                android:textColor="@color/browny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#83F44336"
+                android:text="Grade 12"
+                android:fontFamily="@font/hammersmith_one"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/browny"
+                android:fontFamily="@font/adamina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ABM A\n

@@ -24,6 +24,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -144,13 +145,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String location = searchView.getQuery().toString();
 
 
-                if (location.equalsIgnoreCase("school")){
-                    LatLng loc = new LatLng(13.792659, 121.002470);
+                if (location.equalsIgnoreCase("admin building")||location.equalsIgnoreCase("admin")){
+                    LatLng loc = new LatLng(13.7924604,121.0025501);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Admin Building", Toast.LENGTH_LONG).show();
 
-                } else if (location.equalsIgnoreCase("evacuation area - a")) {
+                } else if (location.equalsIgnoreCase("rizal park")) {
                     LatLng loc = new LatLng(13.792288, 121.003093);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Rizal Park", Toast.LENGTH_LONG).show();
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"No result please try again", Toast.LENGTH_LONG).show();
@@ -1294,6 +1297,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7929733, 121.0023292),
                                 new LatLng(13.792887, 121.002181),
@@ -1312,6 +1316,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7930298, 121.0023394),
                                 new LatLng(13.7931268, 121.0025579),
@@ -1331,6 +1336,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7930298, 121.0023394),
                                 new LatLng(13.7931268, 121.0025579),
@@ -1348,6 +1354,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7930298, 121.0023394),
                                 new LatLng(13.7931268, 121.0025579),
@@ -1366,6 +1373,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7930298, 121.0023394),
                                 new LatLng(13.7931268, 121.0025579),
@@ -1383,6 +1391,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7930298, 121.0023394),
                                 new LatLng(13.7931268, 121.0025579),
@@ -1401,6 +1410,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7926137, 121.0023899),
                                 new LatLng(13.7929052, 121.0025095))
@@ -1418,6 +1428,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7926137, 121.0023899),
                                 new LatLng(13.7928834, 121.0026764))
@@ -1435,6 +1446,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7921878, 121.0024778),
                                 new LatLng(13.7926137, 121.0023899),
                                 new LatLng(13.7927337, 121.0026818))
@@ -1503,6 +1515,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7920832, 121.0026845),
                                 new LatLng(13.7923624, 121.0024102),
                                 new LatLng(13.7933993, 121.0022835),
@@ -1521,7 +1534,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
-                                new LatLng(13.7920832, 121.0026845),
+                                new LatLng(13.7920682,121.0027727),
+                                new LatLng(13.792249,121.0024379),
                                 new LatLng(13.792634683383765, 121.00238906138188),
                                 new LatLng(13.7925778, 121.0020911))
                         .color(Color.BLUE)
@@ -1538,6 +1552,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7920832, 121.0026845),
                                 new LatLng(13.7923518, 121.0024227),
                                 new LatLng(13.7922619, 121.0022435))
@@ -1555,6 +1570,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7920832, 121.0026845),
                                 new LatLng(13.792169, 121.0025045),
                                 new LatLng(13.7920434, 121.0023425))
@@ -1588,8 +1604,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
-                                new LatLng(13.7920832, 121.0026845),
-                                new LatLng(13.792634683383765, 121.00238906138188),
+                                new LatLng(13.7920682,121.0027727),
+                                new LatLng(13.792249,121.0024379),
+                                new LatLng(13.7924942,121.0024109),
                                 new LatLng(13.792463, 121.002317),
                                 new LatLng(13.7924243, 121.001855),
                                 new LatLng(13.7920727, 121.0018269),
@@ -1608,6 +1625,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .add(
                                 new LatLng(13.792288, 121.003093),
                                 new LatLng(13.7921221, 121.0031098),
+                                new LatLng(13.7920682,121.0027727),
                                 new LatLng(13.7920832, 121.0026845),
                                 new LatLng(13.7920034, 121.002549),
                                 new LatLng(13.7919163, 121.0024591),
@@ -2186,7 +2204,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 new LatLng(13.7930226, 121.0023349),
                                 new LatLng(13.7922947, 121.0024394),
                                 new LatLng(13.7920673, 121.0027424),
-                                new LatLng(113.792227845415418, 121.00394145389237))
+                                new LatLng(13.792227845415418, 121.00394145389237))
                         .color(Color.BLUE)
                         .width(20)
                         .pattern(PATTERN_POLYGON_ALPHA)));
@@ -2720,7 +2738,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 new LatLng(13.7930188,121.0023394),
                                 new LatLng(13.79264079697799, 121.00237362140093),
                                 new LatLng(13.792691735515653, 121.0025322532776),
-                                new LatLng(113.7929052,121.0025095))
+                                new LatLng(13.7929052,121.0025095))
 
                         .color(Color.BLUE)
                         .width(20)
@@ -3552,9 +3570,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .clickable(true)
                     .add(
                             new LatLng(13.7929052,121.0025095),
-                            new LatLng(13.7926575, 121.0025103),
-                            new LatLng(13.7928454, 121.0025115),
-                            new LatLng(13.7928607, 121.0026429))
+                            new LatLng(13.7928834,121.0026764))
                     .color(Color.BLUE)
                     .width(20)
                     .pattern(PATTERN_POLYGON_ALPHA)));
