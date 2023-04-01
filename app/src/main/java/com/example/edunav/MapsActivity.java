@@ -150,13 +150,140 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
                     Toast.makeText(getApplicationContext(),"Moved to Admin Building", Toast.LENGTH_LONG).show();
 
-                } else if (location.equalsIgnoreCase("rizal park")) {
+                } else if (location.equalsIgnoreCase("rizal park")||location.equalsIgnoreCase("rizal")){
                     LatLng loc = new LatLng(13.792288, 121.003093);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
                     Toast.makeText(getApplicationContext(),"Moved to Rizal Park", Toast.LENGTH_LONG).show();
                 }
+
+                else if (location.equalsIgnoreCase("field")) {
+                    LatLng loc = new LatLng(13.792933, 121.002053);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Field", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("poolside")) {
+                    LatLng loc = new LatLng(13.793341, 121.002542);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Poolside", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("shs building b")||location.equalsIgnoreCase("shs b")){
+                    LatLng loc = new LatLng(13.7935735,121.0024519);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to SHS Building B", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("shs classrooms")||location.equalsIgnoreCase("shs rooms")){
+                    LatLng loc = new LatLng(13.7932733,121.0023886);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to SHS Classrooms", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("beauty care")||location.equalsIgnoreCase("beauty care room")){
+                    LatLng loc = new LatLng(13.7930047,121.0025058);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Beauty Care Room", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("cookery")||location.equalsIgnoreCase("cookery rooms")){
+                    LatLng loc = new LatLng(13.7930606,121.0026786);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Cookery Rooms", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("guidance")){
+                    LatLng loc = new LatLng(13.7929052,121.0025095);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Guidance", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("h.e room")||location.equalsIgnoreCase("h.e")){
+                    LatLng loc = new LatLng(13.7928834,121.0026764);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to H.E Room", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("canteen")){
+                    LatLng loc = new LatLng(13.7927337,121.0026818);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Canteen", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("tvl classroom")||location.equalsIgnoreCase("tvl")){
+                    LatLng loc = new LatLng(13.7925837,121.0027081);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to TVL Classroom", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("science park")||location.equalsIgnoreCase("science")){
+                    LatLng loc = new LatLng(13.7922604,121.0026845);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Science Park", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("stve Classrooms")||location.equalsIgnoreCase("stve")){
+                    LatLng loc = new LatLng(13.7923624,121.0037623);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to STVE Classrooms", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("main gate")){
+                    LatLng loc = new LatLng(13.7922103,121.0039427);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Main Gate", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("gate")){
+                    LatLng loc = new LatLng(13.7933748,121.0017241);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Gate", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("shs building a")||location.equalsIgnoreCase("shs a")){
+                    LatLng loc = new LatLng(13.7925286,121.0020808);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to SHS Building A", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("gym")||location.equalsIgnoreCase("gymnasium")){
+                    LatLng loc = new LatLng(13.7922342,121.0020808);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Gymnasium", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("grade 10 building a")||location.equalsIgnoreCase("grade 10 a")){
+                    LatLng loc = new LatLng(13.7919917,121.0023384);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Grade 10 Building A", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("electricity")){
+                    LatLng loc = new LatLng(13.7918212,121.0027778);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Electricity", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("grade 10 building b")||location.equalsIgnoreCase("grade 10 b")){
+                    LatLng loc = new LatLng(13.791917,121.001679);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Grade 10 Building B", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("grade 8 classrooms")||location.equalsIgnoreCase("grade 8")){
+                    LatLng loc = new LatLng(13.7918133,121.002288);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Grade 8 Classrooms", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("main")||location.equalsIgnoreCase("main building")){
+                    LatLng loc = new LatLng(13.7925991,121.0031756);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Main Building", Toast.LENGTH_LONG).show();
+                }
+
                 else{
-                    Toast.makeText(getApplicationContext(),"No result please try again", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"No result please try another word", Toast.LENGTH_LONG).show();
                 }
 
                 return false;
@@ -4864,9 +4991,273 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 mMarkerPoints.clear();
             }
 
+            //start of gym to all
+            //1-17 already exist
 
 
 
+            //gym to grade 10 building a
+            else if (mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 19 || mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 18) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792254308951142, 121.00225456815986),
+                                new LatLng(13.792053467150723, 121.00228728372488))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //gym to electricity
+            else if (mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 18) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792254308951142, 121.00225456815986),
+                                new LatLng(13.792321719756533, 121.00241803270278),
+                                new LatLng(13.792148407204982, 121.0025153881858),
+                                new LatLng(13.79208115136344, 121.00277343596888),
+                                new LatLng(13.791895972340258, 121.00277521139422))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //gym to grade 10 building b
+            else if (mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 18) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792175643538014, 121.00191102910057),
+                                new LatLng(13.792046727797361, 121.00181109417004),
+                                new LatLng(13.791917,121.001679))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+            //gym to g8 classrooms
+            else if (mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 18) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.79205366697434, 121.00209741538276),
+                                new LatLng(13.792027904295834, 121.00197340197376),
+                                new LatLng(13.79190122706046, 121.00198650856326),
+                                new LatLng(13.7919062903946, 121.00223514991467))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //gym to main building
+            else if (mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 18) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792247115999619, 121.00225466927095),
+                                new LatLng(13.79231434950641, 121.00242402230727),
+                                new LatLng(13.79213237583828, 121.00256646703706),
+                                new LatLng(13.792062204564864, 121.00284918199723),
+                                new LatLng(13.792161468878598, 121.00329544461943),
+                                new LatLng(13.792453735867124, 121.00321227050748))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //start of grade 10 building a to all
+            //1-18 already exist
+
+
+            //grade 10 building a - electricity
+            else if (mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 19) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.7919917,121.0023384),
+                                new LatLng(13.792166273177019, 121.00251648867342),
+                                new LatLng(13.792075395422009, 121.00277408400657),
+                                new LatLng(13.791892516930966, 121.00277862589249))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //grade 10 building a - grade 10 building b
+            else if (mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 19) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792067777218298, 121.00232574227772),
+                                new LatLng(13.792028994268454, 121.0019456143203),
+                                new LatLng(13.792074886476092, 121.00185164847792),
+                                new LatLng(13.79198106478802, 121.00170565019312))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //grade 10 building a - g8 classrooms
+            else if (mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 19) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792058697510182, 121.00231435399212),
+                                new LatLng(13.792020210747356, 121.00197294983013),
+                                new LatLng(13.791902044729003, 121.00197824556837),
+                                new LatLng(13.791909402294477, 121.0022400239503))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //grade 10 building a - main building
+            else if (mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 19) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.792058697510182, 121.00231435399212),
+                                new LatLng(13.79216050028262, 121.00253964413493),
+                                new LatLng(13.792073279520293, 121.00275517462268),
+                                new LatLng(13.792160487975547, 121.00331364860469),
+                                new LatLng(13.792457970524575, 121.00321061533771))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //electricity - grade 10 building b
+            else if (mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 20) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.791896226942507, 121.00277693311035),
+                                new LatLng(13.792076360486092, 121.0027779686278),
+                                new LatLng(13.792166839086068, 121.00252622427627),
+                                new LatLng(13.79208010016839, 121.00244101098025),
+                                new LatLng(13.792035580756473, 121.00193935100629),
+                                new LatLng(13.79207389889197, 121.00186308909123),
+                                new LatLng(13.791917,121.001679))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+
+            //electricity - g8 classrooms
+            else if (mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 20) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.791883509009336, 121.00273799286668),
+                                new LatLng(13.79187511236969, 121.00247520380282),
+                                new LatLng(13.791906839835969, 121.00224638581984))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //electricity - main building
+            else if (mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 20) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.791896226942507, 121.00277693311035),
+                                new LatLng(13.792076360486092, 121.0027779686278),
+                                new LatLng(13.79214549251284, 121.0033039072567),
+                                new LatLng(13.792450117786354, 121.00321655810994))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+
+            //start of grade 10 building b to all
+            //1-20 already exist
+
+            //grade 10 building b - g8 classrooms
+                else if (mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 21) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.79198577338214, 121.00167559863648),
+                                new LatLng(13.792071407298417, 121.00186517335024),
+                                new LatLng(13.792029073533643, 121.00196628062838),
+                                new LatLng(13.791908842387294, 121.00197952161592),
+                                new LatLng(13.791912161672764, 121.00226906246462))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //grade 10 building b - main bulding
+            else if (mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 21) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.79198577338214, 121.00167559863648),
+                                new LatLng(13.792071407298417, 121.00186517335024),
+                                new LatLng(13.792029073533643, 121.00196628062838),
+                                new LatLng(13.79208178552341, 121.00245660395146),
+                                new LatLng(13.792154382708842, 121.00252699944508),
+                                new LatLng(13.79207247873998, 121.00277590953914),
+                                new LatLng(13.792157427300163, 121.00329724521347),
+                                new LatLng(13.792452987642113, 121.00320855810237))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
+
+            //start of g8 classrooms - all
+            //1-21 already exist
+
+            //g8 classrooms - main building
+
+            else if (mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 22) {
+                polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                        .clickable(true)
+                        .add(
+                                new LatLng(13.791904763881496, 121.00224960407513),
+                                new LatLng(13.791953329181721, 121.0024898128863),
+                                new LatLng(13.791988698149629, 121.00253666292615),
+                                new LatLng(13.792152940843405, 121.00252898596433),
+                                new LatLng(13.792077329378209, 121.00277671704951),
+                                new LatLng(13.792155339693233, 121.0033064259069),
+                                new LatLng(13.792460788972617, 121.00321051212347))
+
+                        .color(Color.BLUE)
+                        .width(20)
+                        .pattern(PATTERN_POLYGON_ALPHA)));
+                mMarkerPoints.clear();
+            }
 
 
 
