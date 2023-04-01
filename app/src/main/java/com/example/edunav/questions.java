@@ -32,7 +32,7 @@ public class questions extends AppCompatActivity {
 
         message= findViewById(R.id.EditText);
 
-        String to = "kimjeirolumalang@gmail.com";
+        String to = "sophiabiancaevora@gmail.com";
         String subject = "Question/Suggestion";
 
         submit= findViewById(R.id.button2);

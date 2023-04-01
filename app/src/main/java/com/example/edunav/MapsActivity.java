@@ -40,6 +40,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.PolygonOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.maps.model.RoundCap;
@@ -81,6 +82,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //polyline store
     List<Polyline> polylines = new ArrayList<Polyline>();
 
+    List<Polygon> polygons = new ArrayList<Polygon>();
+
 //for getting directions
     private LatLng mOrigin;
     private LatLng mDestination;
@@ -104,6 +107,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final PatternItem GAP = new Gap(PATTERN_GAP_LENGTH_PX);
     private static final PatternItem DOT = new Dot();
     private static final List<PatternItem> PATTERN_POLYGON_ALPHA = Arrays.asList(GAP,DOT);
+
+
+
+
 
 
 
@@ -281,6 +288,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
                     Toast.makeText(getApplicationContext(),"Moved to Main Building", Toast.LENGTH_LONG).show();
                 }
+
+                else if (location.equalsIgnoreCase("guard")||location.equalsIgnoreCase("guard house")){
+                    LatLng loc = new LatLng(13.792283599003385, 121.00394303301627);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to Guard House", Toast.LENGTH_LONG).show();
+                }
+
+                else if (location.equalsIgnoreCase("cr")||location.equalsIgnoreCase("toilet")){
+                    LatLng loc = new LatLng(13.791826362467983, 121.00195866536703);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to CR", Toast.LENGTH_LONG).show();
+                }
+
 
                 else{
                     Toast.makeText(getApplicationContext(),"No result please try another word", Toast.LENGTH_LONG).show();
@@ -586,6 +606,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Marker mkr23 = mMap.addMarker(main_M);
         markers.put(mkr23.getId(), 23);
 
+        //guard house
+        LatLng guard = new LatLng(13.792283599003385, 121.00394303301627);
+        MarkerOptions guard_M = new MarkerOptions()
+                .position(guard)
+                .title("Guard House")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guardhouse",100,100)));
+        Marker mkr24 = mMap.addMarker(guard_M);
+        markers.put(mkr24.getId(), 24);
+
+        //cr1
+        LatLng cr = new LatLng(13.791822035874409, 121.00196433254081);
+        MarkerOptions cr_M = new MarkerOptions()
+                .position(cr)
+                .title("CR")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr",100,100)));
+        Marker mkr25 = mMap.addMarker(cr_M);
+        markers.put(mkr25.getId(), 25);
+
+        //cr2
+        LatLng cr2 = new LatLng(13.792537359716832, 121.00179665292717);
+        MarkerOptions cr2_M = new MarkerOptions()
+                .position(cr2)
+                .title("CR")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr",100,100)));
+        Marker mkr26 = mMap.addMarker(cr2_M);
+        markers.put(mkr26.getId(), 26);
+
 
 
 
@@ -593,7 +640,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(admin));
-
 
         //map view
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
@@ -646,7 +692,62 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         MarkerPos = marker.getPosition();
 
-        String id1 = marker.getTitle();
+
+        for(Polygon poly : polygons)
+        {
+            poly.remove();
+        }
+        polygons.clear();
+
+
+        if(id == 22){
+
+            polygons.add(this.mMap.addPolygon(new PolygonOptions()
+                    .add(
+                            new LatLng(13.791975450769938, 121.00249050473879),
+                            new LatLng(13.791986548459562, 121.00277127187307),
+                            new LatLng(13.791886000232603, 121.00277073166302),
+                            new LatLng(13.791886041957477, 121.00250037694592)
+                    )
+                    .strokeColor(Color.GREEN)
+
+            ));
+
+
+            polygons.add(this.mMap.addPolygon(new PolygonOptions()
+                    .add(
+                            new LatLng(13.792013050476305, 121.00200087706307),
+                            new LatLng(13.792029757921291, 121.00216933345934),
+                            new LatLng(13.791937901426598, 121.0021793426512),
+                            new LatLng(13.791925155631747, 121.00201206779901)
+                    )
+                    .strokeColor(Color.GREEN)
+
+            ));
+
+            polygons.add(this.mMap.addPolygon(new PolygonOptions()
+                    .add(
+                            new LatLng(13.791874460524664, 121.00267084155406),
+                            new LatLng(13.79178036453216, 121.00266631054123),
+                            new LatLng(13.791796331616906, 121.00198957477593),
+                            new LatLng(13.791891600001101, 121.00199170192603)
+                    )
+                    .strokeColor(Color.GREEN)
+
+            ));
+
+            polygons.add(this.mMap.addPolygon(new PolygonOptions()
+                    .add(
+                            new LatLng(13.791829998192497, 121.00183691295847),
+                            new LatLng(13.79184070945756, 121.0019602588699),
+                            new LatLng(13.792048721271977, 121.00194408556735),
+                            new LatLng(13.792031803189992, 121.00181208540079)
+                    )
+                    .strokeColor(Color.GREEN)
+
+            ));
+        }
+
 
         //clear polyline for every marker click
         for(Polyline line : polylines)
