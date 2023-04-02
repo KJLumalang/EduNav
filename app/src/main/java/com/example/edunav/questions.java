@@ -52,14 +52,6 @@ public class questions extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
     }
 
     @Override
