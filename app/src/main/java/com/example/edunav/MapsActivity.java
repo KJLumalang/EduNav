@@ -324,8 +324,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void about_us(View view){
-        Intent school_info = new Intent(MapsActivity.this, school_info.class);
-        startActivity(school_info);
+        Intent about_us = new Intent(MapsActivity.this, about_us.class);
+        startActivity(about_us);
     }
 
     public void home(View view){
