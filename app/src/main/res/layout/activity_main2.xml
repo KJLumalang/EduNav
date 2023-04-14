@@ -32,7 +32,8 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:textColor="@color/browny"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:layout_width="381dp"
             android:layout_height="66dp"
             android:layout_marginBottom="188dp"
@@ -40,6 +41,9 @@
             android:text="BAUAN TECHNICAL INTEGRATED HIGH SCHOOL"
             android:textAlignment="center"
             android:textSize="25dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +52,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="415dp"
-            android:layout_height="262dp"
+            android:layout_width="354dp"
+            android:layout_height="206dp"
             android:layout_marginStart="136dp"
             android:layout_marginEnd="136dp"
             app:layout_constraintBottom_toBottomOf="parent"
