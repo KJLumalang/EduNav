@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6B092"
+    tools:context=".guide">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="413dp"
+                android:layout_height="316dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:layout_gravity="center|top"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:textColor="@color/browny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hammersmith_one"
+                android:text="EduNav Guide"
+                android:layout_marginTop="-20dp"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:text="- The application consists of all the buildings, structures, and restrooms inside Bauan Technical Integrated High School.\n\n- These locations can be searched on the search bar of the application so users can find it quicker. \n\n- To use the app, the user have to click the icon of the building or place where he/she is or near at. Then, the user will have to click the desired location he/she intends to go to. A path from the place where the user is located to his/her desired location will be shown in the screen. The user must follow this path to arrive ay where he/she must go.\n\n- The application shows the top view of the campus, but, the user can scroll down the app with two fingers to see the path and places clearly.\n\n- To use the app more effectively, the user must allow the app to access his/her location. An icon of the user will be presented in the app, located at where he/she is at the moment. "
+                android:textColor="@color/browny"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

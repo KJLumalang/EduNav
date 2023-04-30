@@ -51,8 +51,8 @@ public class MainActivity2 extends AppCompatActivity {
         myImageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent questions = new Intent(MainActivity2.this, questions.class);
-                startActivity(questions);
+                Intent guide = new Intent(MainActivity2.this, guide.class);
+                startActivity(guide);
 
             }
         });
