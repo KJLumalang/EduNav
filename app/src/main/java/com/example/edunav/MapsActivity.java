@@ -716,7 +716,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions dump_M = new MarkerOptions()
                 .position(dump)
                 .title("Dump Site")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("dump",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("dumpi",100,100)));
         Marker mkr32 = mMap.addMarker(dump_M);
         markers.put(mkr32.getId(), 32);
 

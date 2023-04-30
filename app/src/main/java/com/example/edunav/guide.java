@@ -13,6 +13,7 @@ public class guide extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+        getSupportActionBar().hide();//hide action bar
 
         View decorView = getWindow().getDecorView();
 
