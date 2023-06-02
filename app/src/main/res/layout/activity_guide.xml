@@ -22,25 +22,25 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="413dp"
-                android:layout_height="316dp"
+                android:layout_width="311dp"
+                android:layout_height="216dp"
+                android:layout_gravity="center|top"
                 android:layout_margin="0dp"
                 android:padding="0dp"
-                android:layout_gravity="center|top"
                 app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:textColor="@color/browny"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/hammersmith_one"
-                android:text="EduNav Guide"
-                android:layout_marginTop="-20dp"
                 android:gravity="center"
-                android:textSize="50dp"
-                android:textStyle="bold"
-                android:layout_gravity="center"/>
+                android:text="NAVINITES Guide"
+                android:textColor="@color/browny"
+                android:textSize="40dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView12"

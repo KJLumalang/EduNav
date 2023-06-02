@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EduNav</string>
+    <string name="app_name">Navinites</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_maps2">MapsActivity2</string>
     <string name="map_key" translatable="false">AIzaSyB6VLe1GFyZt8oNCbG0DHLPqn-egPyhxp4</string>

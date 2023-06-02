@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -91,6 +93,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     ArrayList<Integer> mMarkerPoints = new ArrayList<Integer>();;
     private Polyline mPolyline;
     private LatLng MarkerPos;
+    private int markerclicked;
 
 
 
@@ -134,6 +137,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+
 
 
 
@@ -346,8 +350,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // at last we calling our map fragment to update.
         mapFragment.getMapAsync(this);
 
-
     }
+
+
 
     public void about_us(View view){
         Intent about_us = new Intent(MapsActivity.this, about_us.class);
@@ -398,7 +403,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         "AVR\n" +
                         "JHS Faculty\n" +
                         " SHS and JHS Registrar")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("school",160,160)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("admin_s_bldg",160,160)));
 
         Marker mkr1 = mMap.addMarker(adminM);
         markers.put(mkr1.getId(), 1);
@@ -441,7 +446,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(shs_b)
                 .title("SHS Building B")
                 .snippet("HUMSS & ABM")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_bldg_b",100,100)));
 
         Marker mkr5 = mMap.addMarker(shs_b_M);
         markers.put(mkr5.getId(), 5);
@@ -451,7 +456,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions shsclassrooms_M = new MarkerOptions()
                 .position(shsclassrooms)
                 .title("SHS Classrooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_classrooms",100,100)));
 
         Marker mkr6 = mMap.addMarker(shsclassrooms_M);
         markers.put(mkr6.getId(), 6);
@@ -461,7 +466,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions beauty_M = new MarkerOptions()
                 .position(beauty)
                 .title("Beauty Care Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("beauty",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("beauty_care_room",100,100)));
 
         Marker mkr7 = mMap.addMarker(beauty_M);
         markers.put(mkr7.getId(), 7);
@@ -471,7 +476,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions cookery_M = new MarkerOptions()
                 .position(cookery)
                 .title("Cookery Rooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cookery",100,100)));
 
         Marker mkr8 = mMap.addMarker(cookery_M);
         markers.put(mkr8.getId(), 8);
@@ -482,7 +487,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions guidance_M = new MarkerOptions()
                 .position(guidance)
                 .title("Guidance Office")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guidance_office",100,100)));
 
         Marker mkr9 = mMap.addMarker(guidance_M);
         markers.put(mkr9.getId(), 9);
@@ -492,7 +497,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions he_M = new MarkerOptions()
                 .position(he)
                 .title("H.E Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guidance_office",100,100)));
 
         Marker mkr10 = mMap.addMarker(he_M);
         markers.put(mkr10.getId(), 10);
@@ -524,7 +529,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions science_M = new MarkerOptions()
                 .position(science)
                 .title("Science Park")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("room",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("science_park",100,100)));
 
         Marker mkr13 = mMap.addMarker(science_M);
         markers.put(mkr13.getId(), 13);
@@ -569,7 +574,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         "SHS Faculty\n" +
                         "Research Center\n" +
                         "SHS Focal Person Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_bldg_a",100,100)));
 
         Marker mkr17 = mMap.addMarker(shs_a_M);
         markers.put(mkr17.getId(), 17);
@@ -579,7 +584,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions gym_M = new MarkerOptions()
                 .position(gym)
                 .title("Gymnasium")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gym",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gymnasium",100,100)));
 
         Marker mkr18 = mMap.addMarker(gym_M);
         markers.put(mkr18.getId(), 18);
@@ -590,7 +595,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions g10buildinga_M = new MarkerOptions()
                 .position(g10buildinga)
                 .title("Grade 10 Building A")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("g10_bldg_a",100,100)));
 
         Marker mkr19 = mMap.addMarker(g10buildinga_M);
         markers.put(mkr19.getId(), 19);
@@ -600,7 +605,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions electricity_M = new MarkerOptions()
                 .position(electricity)
                 .title("Electricity Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("electric",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("electricity_room",100,100)));
 
         Marker mkr20 = mMap.addMarker(electricity_M);
         markers.put(mkr20.getId(), 20);
@@ -610,7 +615,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions g10buildingb_M = new MarkerOptions()
                 .position(g10buildingb)
                 .title("Grade 10 Building B")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("g10_bldg_b",100,100)));
 
         Marker mkr21 = mMap.addMarker(g10buildingb_M);
         markers.put(mkr21.getId(), 21);
@@ -621,7 +626,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions g8rooms_M = new MarkerOptions()
                 .position(g8rooms)
                 .title("Grade 8 Classrooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("g8_classrooms",100,100)));
 
         Marker mkr22 = mMap.addMarker(g8rooms_M);
         markers.put(mkr22.getId(), 22);
@@ -634,7 +639,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(main)
                 .title("Main Building")
                 .snippet("Grade 7, 8 and 9")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("main_bldg",100,100)));
 
         Marker mkr23 = mMap.addMarker(main_M);
         markers.put(mkr23.getId(), 23);
@@ -644,7 +649,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions guard_M = new MarkerOptions()
                 .position(guard)
                 .title("Guard House")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guardhouse",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guard_house",100,100)));
         Marker mkr24 = mMap.addMarker(guard_M);
         markers.put(mkr24.getId(), 24);
 
@@ -653,7 +658,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions cr_M = new MarkerOptions()
                 .position(cr)
                 .title("CR")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr1",100,100)));
         Marker mkr25 = mMap.addMarker(cr_M);
         markers.put(mkr25.getId(), 25);
 
@@ -680,7 +685,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions jhsclinic_M = new MarkerOptions()
                 .position(jhsclinic)
                 .title("JHS Clinic")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("clinic",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("jhs_clinic",100,100)));
         Marker mkr28 = mMap.addMarker(jhsclinic_M);
         markers.put(mkr28.getId(), 28);
 
@@ -689,7 +694,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions shsclinic_M = new MarkerOptions()
                 .position(shsclinic)
                 .title("SHS Clinic")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("clinic",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_clinic",100,100)));
         Marker mkr29 = mMap.addMarker(shsclinic_M);
         markers.put(mkr29.getId(), 30);
 
@@ -698,7 +703,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions immersion_M = new MarkerOptions()
                 .position(immersion)
                 .title("Immersion Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("immersion_room",100,100)));
         Marker mkr30 = mMap.addMarker(immersion_M);
         markers.put(mkr30.getId(), 29);
 
@@ -763,6 +768,46 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //move camera to fill the bound to screen
         mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding));
 
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+
+            // Use default InfoWindow frame
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            // Defines the contents of the InfoWindow
+            @Override
+            public View getInfoContents(Marker marker) {
+
+                // Getting view from the layout file infowindowlayout.xml
+                View v = getLayoutInflater().inflate(R.layout.infowindowlayout, null);
+
+                LatLng latLng = marker.getPosition();
+
+                ImageView im = (ImageView) v.findViewById(R.id.imageView1);
+                TextView tv1 = (TextView) v.findViewById(R.id.textView1);
+                TextView tv2 = (TextView) v.findViewById(R.id.textView2);
+                String title=marker.getTitle();
+                String informations=marker.getSnippet();
+
+                tv1.setText(title);
+                tv2.setText(informations);
+
+                if(markerclicked==1) {
+                    im.setImageResource(R.drawable.classroom);
+                } else if (markerclicked==2) {
+                    im.setImageResource(R.drawable.logo);
+                }
+                else{}
+
+
+                return v;
+
+            }
+        });
+
+
     }
 
     @Override
@@ -770,6 +815,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         int id = markers.get(marker.getId());
+
+        markerclicked= markers.get(marker.getId());
 
         mMarkerPoints.add(id);
 
@@ -784,6 +831,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         if(id == 22){
+
+
 
             polygons.add(this.mMap.addPolygon(new PolygonOptions()
                     .add(
@@ -829,6 +878,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .strokeColor(Color.GREEN)
 
             ));
+
+
+
         }
 
 
