@@ -725,6 +725,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Marker mkr32 = mMap.addMarker(dump_M);
         markers.put(mkr32.getId(), 32);
 
+        //shs focal
+        LatLng focal = new LatLng(13.792523386023257, 121.00233422676274);
+        MarkerOptions focal_M = new MarkerOptions()
+                .position(focal)
+                .title("SHS Focal Person Room")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_focal_person_room",100,100)));
+        Marker mkr33 = mMap.addMarker(focal_M);
+        markers.put(mkr33.getId(), 33);
+
+        //discipline
+        LatLng discipline = new LatLng(13.791911272504938, 121.00287197027075);
+        MarkerOptions discipline_M = new MarkerOptions()
+                .position(discipline)
+                .title("Prefect of Discipline")
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_focal_person_room",100,100)));
+        Marker mkr34 = mMap.addMarker(discipline_M);
+        markers.put(mkr34.getId(), 34);
+
 
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(admin));
@@ -1326,8 +1344,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 //tvl - admin
                 //already exist
-
-
                 //tvl - rizal park
             } else if (mMarkerPoints.get(0) == 12 && mMarkerPoints.get(1) == 2 || mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 12) {
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
@@ -5313,8 +5329,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             //start of grade 10 building a to all
             //1-18 already exist
-
-
             //grade 10 building a - electricity
             else if (mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 19) {
                 polylines.add(this.mMap.addPolyline(new PolylineOptions()
@@ -9787,9 +9801,1099 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 mMarkerPoints.clear();
             }
 
+        else{
+           getPath3();
+        }
+
+    }
+
+    private void getPath3(){
+
+        //focal to all
+        // focal to admin
+        if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 1 || mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 33) {
 
 
-            else{
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.79251665106813, 121.00239607666069),
+                            new LatLng(13.792330740073927, 121.00242858379059),
+                            new LatLng(13.792375367465572, 121.00248453399763))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+
+            mMarkerPoints.clear();
+
+            //focal - field
+        }
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 2 || mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 2) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7929594, 121.00234),
+                            new LatLng(13.7928543, 121.0021602),
+                            new LatLng(13.792933, 121.002053))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+
+            mMarkerPoints.clear();
+
+            //focal - shs building b
+        }
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 3 || mMarkerPoints.get(0) == 3 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7929594, 121.00234),
+                            new LatLng(13.7928543, 121.0021602),
+                            new LatLng(13.792933, 121.002053))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+
+            mMarkerPoints.clear();
+
+            //focal - shs building b
+        }
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 4 || mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7930222, 121.0023341),
+                            new LatLng(13.7930876, 121.0025171),
+                            new LatLng(13.793341, 121.002542))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+
+            mMarkerPoints.clear();
+
+
+            //focal - shs classrooms
+        }else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 5 || mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7930222, 121.0023341),
+                            new LatLng(13.7930876, 121.0025171),
+                            new LatLng(13.7935735, 121.0024519))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+
+            mMarkerPoints.clear();
+
+            //focal - poolside
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 6 || mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7930222, 121.0023341),
+                            new LatLng(13.7930876, 121.0025171),
+                            new LatLng(13.7932733, 121.0023886))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+
+            mMarkerPoints.clear();
+
+
+            //focal - beauty care
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 7 || mMarkerPoints.get(0) == 7 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7930222, 121.0023341),
+                            new LatLng(13.7930876, 121.0025171))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - cookery
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 8 || mMarkerPoints.get(0) == 8 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7930222, 121.0023341),
+                            new LatLng(13.7930876, 121.0025171),
+                            new LatLng(13.7931182, 121.0026665))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - canteen
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 11 || mMarkerPoints.get(0) == 11 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7926653, 121.0023703),
+                            new LatLng(13.7927289, 121.0026057))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - tvl classroom
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 12 || mMarkerPoints.get(0) == 12 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7926653, 121.0023703),
+                            new LatLng(13.7926226, 121.0026481))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - guidance
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 9 || mMarkerPoints.get(0) == 9 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7926653, 121.0023703),
+                            new LatLng(13.7927234, 121.0025613),
+                            new LatLng(13.7928348, 121.0025863))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - h.e room
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 10 || mMarkerPoints.get(0) == 10 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7926653, 121.0023703),
+                            new LatLng(13.7927234, 121.0025613),
+                            new LatLng(13.7928348, 121.0025863))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+
+            //focal - shs building a
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 17 || mMarkerPoints.get(0) == 17 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.79264012781666, 121.0023789848412),
+                            new LatLng(13.7925995, 121.0020713))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+
+            //focal - gym
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 18 || mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.79227004348421, 121.00232621646784),
+                            new LatLng(13.792285336671819, 121.00225031661394))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+
+            //focal - electric
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.792075, 121.0027812),
+                            new LatLng(13.7919033, 121.0027801))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - g8 classrooms
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.7919995, 121.0025903),
+                            new LatLng(13.791901, 121.0023677))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+
+            //focal - g10 building a
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 19 || mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.7920935, 121.0024609),
+                            new LatLng(13.7920698, 121.002338))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - science park
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 13 || mMarkerPoints.get(0) == 13 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.7921895, 121.0026105),
+                            new LatLng(13.7922604, 121.0026845))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - stve
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 14 || mMarkerPoints.get(0) == 14 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.7920773, 121.0028928),
+                            new LatLng(13.79221, 121.0036171),
+                            new LatLng(13.7922672, 121.0037836))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+
+            //focal - main bulding
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.7920773, 121.0028928),
+                            new LatLng(13.7921469, 121.0031955),
+                            new LatLng(13.7924435, 121.0032114))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+
+            //focal - gate
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 16 || mMarkerPoints.get(0) == 16 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.792444, 121.0024047),
+                            new LatLng(13.7933741, 121.0022825),
+                            new LatLng(13.7933453, 121.0017203))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+            //focal - main gate
+        } else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 15 || mMarkerPoints.get(0) == 15 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.7920773, 121.0028928),
+                            new LatLng(13.79221, 121.0036171),
+                            new LatLng(13.7922539, 121.0038847),
+                            new LatLng(13.79221781663594, 121.003935301053))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+
+
+            //focal - g10 building b
+        }
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7924935, 121.0024029),
+                            new LatLng(13.7924609, 121.0022389),
+                            new LatLng(13.7924154, 121.0018621),
+                            new LatLng(13.7920825, 121.0018384),
+                            new LatLng(13.7919818, 121.0017186))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //guard house
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 24 || mMarkerPoints.get(0) == 24 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519524585158, 121.00239120838488),
+                            new LatLng(13.7921697, 121.0024995),
+                            new LatLng(13.7920773, 121.0028928),
+                            new LatLng(13.79221, 121.0036171),
+                            new LatLng(13.7922539, 121.0038847),
+                            new LatLng(13.79221781663594, 121.003935301053))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //guard cr
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 25 || mMarkerPoints.get(0) == 25 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519985062041, 121.00234786343364),
+                            new LatLng(13.792300441212118, 121.00225637667387),
+                            new LatLng(13.792069665230786, 121.00229228946428),
+                            new LatLng(13.792030559021697, 121.00197534638824),
+                            new LatLng(13.791858274301863, 121.00197130680854))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //guard cr2
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 26 || mMarkerPoints.get(0) == 26 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519985062041, 121.00234786343364),
+                            new LatLng(13.792474648849657, 121.0023269423128),
+                            new LatLng(13.79242901444967, 121.00185668317987),
+                            new LatLng(13.792524263297562, 121.00182893783052))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //construction
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 27 || mMarkerPoints.get(0) == 27 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792519985062041, 121.00234786343364),
+                            new LatLng(13.792474648849657, 121.0023269423128),
+                            new LatLng(13.79242901444967, 121.00185668317987),
+                            new LatLng(13.792524263297562, 121.00182893783052),
+                            new LatLng(13.792652771938585, 121.00181614133582),
+                            new LatLng(13.792742121691031, 121.00176344821922))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //jhs clinic
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 28 || mMarkerPoints.get(0) == 28 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792514609029643, 121.00239449704803),
+                            new LatLng(13.79235806985932, 121.00242049846075),
+                            new LatLng(13.792173476108944, 121.00251174660792),
+                            new LatLng(13.792079693945274, 121.00273417027257),
+                            new LatLng(13.792068037464725, 121.00278224379329),
+                            new LatLng(13.791973330303197, 121.00277581867988))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //immersion
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 29 || mMarkerPoints.get(0) == 29 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792514609029643, 121.00239449704803),
+                            new LatLng(13.79277593983821, 121.00236494869452))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //shs clinic
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 30 || mMarkerPoints.get(0) == 30 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792514609029643, 121.00239449704803),
+                            new LatLng(13.792784845410461, 121.00236966913339))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //welding
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 31 || mMarkerPoints.get(0) == 31 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792514609029643, 121.00239449704803),
+                            new LatLng(13.792215806338232, 121.00248007425154),
+                            new LatLng(13.792076069297275, 121.00275976619407),
+                            new LatLng(13.792211301302258, 121.00359458681038),
+                            new LatLng(13.792383290148726, 121.00357827568484))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //dump
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 32 || mMarkerPoints.get(0) == 32 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792514609029643, 121.00239449704803),
+                            new LatLng(13.793503291260816, 121.00225983771959))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //dump
+        else if (mMarkerPoints.get(0) == 33 && mMarkerPoints.get(1) == 34 || mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 33) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.792514609029643, 121.00239449704803),
+                            new LatLng(13.792298453671215, 121.0024382076809),
+                            new LatLng(13.792083521622017, 121.00277814716945),
+                            new LatLng(13.791943031419615, 121.00277679936482))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //prefect of discipline to all
+        //to admin
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 1 || mMarkerPoints.get(0) == 1 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792164488967822, 121.00253800789639),
+                            new LatLng(13.79232332487984, 121.00244877683743),
+                            new LatLng(13.792373420125715, 121.00248386103591))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to rizal
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 2 || mMarkerPoints.get(0) == 2 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792130684536316, 121.00319316110337),
+                            new LatLng(13.792288, 121.003093))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to field
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 3 || mMarkerPoints.get(0) == 3 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.793002562653765, 121.00233786094131),
+                            new LatLng(13.792878178670216, 121.00216529118848),
+                            new LatLng(13.792933, 121.002053))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to poolside
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 4 || mMarkerPoints.get(0) == 4 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.79303163969183, 121.00233807792394),
+                            new LatLng(13.793072524702458, 121.00251231191054),
+                            new LatLng(13.793279766623971, 121.00256266637146))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to shs bldg b
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 5 || mMarkerPoints.get(0) == 5 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.79303163969183, 121.00233807792394),
+                            new LatLng(13.793072524702458, 121.00251231191054),
+                            new LatLng(13.793505338368218, 121.00244922627104))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to shs clasrooms
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 6 || mMarkerPoints.get(0) == 6 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.79303163969183, 121.00233807792394),
+                            new LatLng(13.793072524702458, 121.00251231191054),
+                            new LatLng(13.79327123183944, 121.00243408002694))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to shs beauty
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 7 || mMarkerPoints.get(0) == 7 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.79303163969183, 121.00233807792394),
+                            new LatLng(13.793072524702458, 121.00251231191054))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to cookery
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 8 || mMarkerPoints.get(0) == 8 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.79303163969183, 121.00233807792394),
+                            new LatLng(13.793072524702458, 121.00251231191054),
+                            new LatLng(13.79311334154712, 121.00265160981449))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to guidance
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 9 || mMarkerPoints.get(0) == 9 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.792631670817116, 121.00239354757367),
+                            new LatLng(13.792654844765721, 121.00250909500507),
+                            new LatLng(13.792833726913308, 121.00252845658585))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to he
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 10 || mMarkerPoints.get(0) == 10 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.792631670817116, 121.00239354757367),
+                            new LatLng(13.792654844765721, 121.00250909500507),
+                            new LatLng(13.792859130874447, 121.00260505961445))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to canteen
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 11 || mMarkerPoints.get(0) == 11 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.792631670817116, 121.00239354757367),
+                            new LatLng(13.792654844765721, 121.00250909500507),
+                            new LatLng(13.79273894309481, 121.00260619749533))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to tvl
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 12 || mMarkerPoints.get(0) == 12 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792166501355846, 121.00252103658813),
+                            new LatLng(13.79245217260875, 121.00241385153467),
+                            new LatLng(13.792631670817116, 121.00239354757367),
+                            new LatLng(13.792654844765721, 121.00250909500507),
+                            new LatLng(13.79266664237124, 121.00268721470117))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to science
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 13 || mMarkerPoints.get(0) == 13 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792132400691688, 121.00258990528053),
+                            new LatLng(13.7922604,121.0026845))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to stve
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 14 || mMarkerPoints.get(0) == 14 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792228336625962, 121.00368389914146))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to main gate
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 15 || mMarkerPoints.get(0) == 15 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792228336625962, 121.00368389914146),
+                            new LatLng(13.792246767011227, 121.0039378123509))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to gate
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 16 || mMarkerPoints.get(0) == 16 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792144273467372, 121.00254490385083),
+                            new LatLng(13.792259600477026, 121.00245353335204),
+                            new LatLng(13.793398260632062, 121.00227575954484),
+                            new LatLng(13.793352336230843, 121.00171278902702))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to shs building a
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 17 || mMarkerPoints.get(0) == 17 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792164385311109, 121.00251261117805),
+                            new LatLng(13.792616786817483, 121.00238375674103),
+                            new LatLng(13.79259384708019, 121.00209112549233))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to gym
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 18 || mMarkerPoints.get(0) == 18 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792172336016716, 121.00251869010428),
+                            new LatLng(13.792263572509725, 121.00233871906683),
+                            new LatLng(13.792237756173275, 121.00225480244347))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to g10 building a
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 19 || mMarkerPoints.get(0) == 19 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163947450701, 121.00251986303371),
+                            new LatLng(13.7920745398179, 121.00240579412858),
+                            new LatLng(13.792070106936427, 121.00233375226492))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to electricity
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 20 || mMarkerPoints.get(0) == 20 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.791893150933078, 121.00277740317723))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to g10 building b
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 21 || mMarkerPoints.get(0) == 21 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163947450701, 121.00251986303371),
+                            new LatLng(13.7920745398179, 121.00240579412858),
+                            new LatLng(13.792020958548461, 121.00195652698677),
+                            new LatLng(13.792073713207426, 121.00186347227927),
+                            new LatLng(13.791982992673328, 121.0017187988089))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to g8 classrooms
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 22 || mMarkerPoints.get(0) == 22 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.791897682885109, 121.00277548765618),
+                            new LatLng(13.79188027387189, 121.00257575780718),
+                            new LatLng(13.791885614329587, 121.0024101149675),
+                            new LatLng(13.79191031256014, 121.00230591494608))
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to main
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 23 || mMarkerPoints.get(0) == 23 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792130684536316, 121.00319316110337),
+                            new LatLng(13.792442329183297, 121.00321565972678))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to guard
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 24 || mMarkerPoints.get(0) == 24 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792130684536316, 121.00319316110337),
+                            new LatLng(13.792254528371048, 121.00392900031078))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to cr1
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 25 || mMarkerPoints.get(0) == 25 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163235118073, 121.0025196770192),
+                            new LatLng(13.792072791591998, 121.00234310888015),
+                            new LatLng(13.792032420374232, 121.00197118313352),
+                            new LatLng(13.791849270360306, 121.00196320207014))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to cr2
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 26|| mMarkerPoints.get(0) == 26 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163235118073, 121.0025196770192),
+                            new LatLng(13.792072791591998, 121.00234310888015),
+                            new LatLng(13.792032420374232, 121.00197118313352),
+                            new LatLng(13.792069941061415, 121.00190687966764),
+                            new LatLng(13.792515080438179, 121.00183591428099))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to construction
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 27|| mMarkerPoints.get(0) == 27 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163235118073, 121.0025196770192),
+                            new LatLng(13.792072791591998, 121.00234310888015),
+                            new LatLng(13.792032420374232, 121.00197118313352),
+                            new LatLng(13.792069941061415, 121.00190687966764),
+                            new LatLng(13.792515080438179, 121.00183591428099),
+                            new LatLng(13.792727572843607, 121.00178447004197))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to jhs clinic
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 28|| mMarkerPoints.get(0) == 28 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792000445445495, 121.00277659806231))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to immersion
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 29|| mMarkerPoints.get(0) == 29 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163235118073, 121.0025196770192),
+                            new LatLng(13.792784845410461, 121.00236966913339))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to shs clinic
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 30|| mMarkerPoints.get(0) == 30 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163235118073, 121.0025196770192),
+                            new LatLng(13.792784845410461, 121.00236966913339))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        //to welding
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 31|| mMarkerPoints.get(0) == 31 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792202402895471, 121.00353916690412),
+                            new LatLng(13.792398035081119, 121.00355450889597))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+        //to dump
+        else if (mMarkerPoints.get(0) == 34 && mMarkerPoints.get(1) == 32|| mMarkerPoints.get(0) == 32 && mMarkerPoints.get(1) == 34) {
+
+            polylines.add(this.mMap.addPolyline(new PolylineOptions()
+                    .clickable(true)
+                    .add(
+                            new LatLng(13.791939983132412, 121.00277631469567),
+                            new LatLng(13.792074213066563, 121.00277920750084),
+                            new LatLng(13.792163235118073, 121.0025196770192),
+                            new LatLng(13.792784845410461, 121.00236966913339),
+                            new LatLng(13.793503584843329, 121.00226353769321))
+
+                    .color(Color.CYAN)
+                    .width(20)
+                    .pattern(PATTERN_POLYGON_ALPHA)));
+            mMarkerPoints.clear();
+        }
+
+        else{
             mMarkerPoints.clear();
         }
 
