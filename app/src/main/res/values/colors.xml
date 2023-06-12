@@ -9,6 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="browny">#715143</color>
     <color name="sky">#87ceeb</color>
+    <color name="peach">#ffd8b1</color>
+    <color name="darkpeach">#ffd2b4</color>
 
 
 </resources>

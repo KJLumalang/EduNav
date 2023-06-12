@@ -47,6 +47,12 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.maps.model.RoundCap;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseError;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -78,7 +84,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // for search view.
     SearchView searchView;
 
-
+    DatabaseReference database;
 
     Map<String, Integer> markers = new HashMap<String, Integer>();
 //polyline store
@@ -117,7 +123,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        database = FirebaseDatabase.getInstance("https://navinites-ee06a-default-rtdb.firebaseio.com").getReference("visits");
 
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         View decorView = getWindow().getDecorView();
@@ -413,7 +419,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions area_a_M = new MarkerOptions()
                 .position(area_a)
                 .title("Rizal Park")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("rizal",100,100)));
 
         Marker mkr2 = mMap.addMarker(area_a_M);
         markers.put(mkr2.getId(), 2);
@@ -424,7 +430,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions area_b_M = new MarkerOptions()
                 .position(area_b)
                 .title("Field")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("field",100,100)));
 
         Marker mkr3 = mMap.addMarker(area_b_M);
         markers.put(mkr3.getId(), 3);
@@ -434,7 +440,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions poolside_M = new MarkerOptions()
                 .position(poolside)
                 .title("Poolside")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("evacuation",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("pool_side",100,100)));
 
         Marker mkr4 = mMap.addMarker(poolside_M);
         markers.put(mkr4.getId(), 4);
@@ -497,7 +503,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions he_M = new MarkerOptions()
                 .position(he)
                 .title("H.E Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guidance_office",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",100,100)));
 
         Marker mkr10 = mMap.addMarker(he_M);
         markers.put(mkr10.getId(), 10);
@@ -518,7 +524,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions tvl_M = new MarkerOptions()
                 .position(tvl)
                 .title("TVL Classroom")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("tvl",100,100)));
 
         Marker mkr12 = mMap.addMarker(tvl_M);
         markers.put(mkr12.getId(), 12);
@@ -539,7 +545,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions stve_M = new MarkerOptions()
                 .position(stve)
                 .title("STVE Classrooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("classroom",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("stve",100,100)));
 
         Marker mkr14 = mMap.addMarker(stve_M);
         markers.put(mkr14.getId(), 14);
@@ -549,7 +555,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions maingate_M = new MarkerOptions()
                 .position(maingate)
                 .title("Main Gate")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("gate",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("main_gate",100,100)));
 
         Marker mkr15 = mMap.addMarker(maingate_M);
         markers.put(mkr15.getId(), 15);
@@ -649,7 +655,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions guard_M = new MarkerOptions()
                 .position(guard)
                 .title("Guard House")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guard_house",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("guard",100,100)));
         Marker mkr24 = mMap.addMarker(guard_M);
         markers.put(mkr24.getId(), 24);
 
@@ -667,7 +673,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions cr2_M = new MarkerOptions()
                 .position(cr2)
                 .title("CR")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr1",100,100)));
         Marker mkr26 = mMap.addMarker(cr2_M);
         markers.put(mkr26.getId(), 26);
 
@@ -703,7 +709,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions immersion_M = new MarkerOptions()
                 .position(immersion)
                 .title("Immersion Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("immersion_room",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("immerssion",100,100)));
         Marker mkr30 = mMap.addMarker(immersion_M);
         markers.put(mkr30.getId(), 29);
 
@@ -712,7 +718,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions weld_M = new MarkerOptions()
                 .position(weld)
                 .title("Welding Rooms")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("welder",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("welding",100,100)));
         Marker mkr31 = mMap.addMarker(weld_M);
         markers.put(mkr31.getId(), 31);
 
@@ -721,7 +727,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions dump_M = new MarkerOptions()
                 .position(dump)
                 .title("Dump Site")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("dumpi",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("dump",100,100)));
         Marker mkr32 = mMap.addMarker(dump_M);
         markers.put(mkr32.getId(), 32);
 
@@ -730,7 +736,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions focal_M = new MarkerOptions()
                 .position(focal)
                 .title("SHS Focal Person Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_focal_person_room",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("focal",100,100)));
         Marker mkr33 = mMap.addMarker(focal_M);
         markers.put(mkr33.getId(), 33);
 
@@ -739,7 +745,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions discipline_M = new MarkerOptions()
                 .position(discipline)
                 .title("Prefect of Discipline")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("shs_focal_person_room",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("prefect",100,100)));
         Marker mkr34 = mMap.addMarker(discipline_M);
         markers.put(mkr34.getId(), 34);
 
@@ -791,12 +797,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // Use default InfoWindow frame
             @Override
             public View getInfoWindow(Marker marker) {
-                return null;
-            }
-
-            // Defines the contents of the InfoWindow
-            @Override
-            public View getInfoContents(Marker marker) {
 
                 // Getting view from the layout file infowindowlayout.xml
                 View v = getLayoutInflater().inflate(R.layout.infowindowlayout, null);
@@ -813,14 +813,139 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 tv2.setText(informations);
 
                 if(markerclicked==1) {
-                    im.setImageResource(R.drawable.classroom);
-                } else if (markerclicked==2) {
-                    im.setImageResource(R.drawable.logo);
+                    im.setImageResource(R.drawable.admin0);
+                    //start
+                    DatabaseReference db1 = database.child("1/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+
+                            String val = (String) dataSnapshot.getValue();
+                            long value = Long.parseLong(val);
+                            value = value + 1;
+                            String value1 = String.valueOf(value);
+                            database.child("1/view").setValue(value1);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
+                }
+                else if (markerclicked==2) {
+                    im.setImageResource(R.drawable.rizal0);
+                }
+                else if (markerclicked==3) {
+                    im.setImageResource(R.drawable.field0);
+                }
+                else if (markerclicked==4) {
+                    im.setImageResource(R.drawable.pool_side0);
+                }
+                else if (markerclicked==5) {
+                    im.setImageResource(R.drawable.shs_bldg_b0);
+                }
+                else if (markerclicked==6) {
+                    im.setImageResource(R.drawable.shs_classrooms0);
+                }
+                else if (markerclicked==7) {
+                    im.setImageResource(R.drawable.beauty0);
+                }
+                else if (markerclicked==8) {
+                    im.setImageResource(R.drawable.cookery_room0);
+                }
+                else if (markerclicked==9) {
+                    im.setImageResource(R.drawable.guidance_office0);
+                }
+                else if (markerclicked==10) {
+                    im.setImageResource(R.drawable.canteen0);
+                }
+                else if (markerclicked==11) {
+                    im.setImageResource(R.drawable.canteen0);
+                }
+                else if (markerclicked==12) {
+                    im.setImageResource(R.drawable.tvl0);
+                }
+                else if (markerclicked==13) {
+                    im.setImageResource(R.drawable.science0);
+                }
+                else if (markerclicked==14) {
+                    im.setImageResource(R.drawable.stve0);
+                }
+                else if (markerclicked==15) {
+                    im.setImageResource(R.drawable.main_gate0);
+                }
+                else if (markerclicked==16) {
+                    im.setImageResource(R.drawable.gate0);
+                }
+                else if (markerclicked==17) {
+                    im.setImageResource(R.drawable.shs_bldg_a0);
+                }
+                else if (markerclicked==18) {
+                    im.setImageResource(R.drawable.gymnasium0);
+                }
+                else if (markerclicked==19) {
+                    im.setImageResource(R.drawable.g10_bldg_a0);
+                }
+                else if (markerclicked==20) {
+                    im.setImageResource(R.drawable.electricity0);
+                }
+                else if (markerclicked==21) {
+                    im.setImageResource(R.drawable.g10_bldg_b0);
+                }
+                else if (markerclicked==22) {
+                    im.setImageResource(R.drawable.g8_classrooms0);
+                }
+                else if (markerclicked==23) {
+                    im.setImageResource(R.drawable.main_bldg0);
+                }
+                else if (markerclicked==24) {
+                    im.setImageResource(R.drawable.guard0);
+                }
+                else if (markerclicked==25) {
+                    im.setImageResource(R.drawable.cr1);
+                }
+                else if (markerclicked==26) {
+                    im.setImageResource(R.drawable.cr1);
+                }
+                else if (markerclicked==27) {
+                    im.setImageResource(R.drawable.cr1);
+                }
+                else if (markerclicked==28) {
+                    im.setImageResource(R.drawable.jhs_clinic0);
+                }
+                else if (markerclicked==29) {
+                    im.setImageResource(R.drawable.immerssion0);
+                }
+                else if (markerclicked==30) {
+                    im.setImageResource(R.drawable.shs_clinic0);
+                }
+                else if (markerclicked==31) {
+                    im.setImageResource(R.drawable.welding0);
+                }
+                else if (markerclicked==32) {
+                    im.setImageResource(R.drawable.dump0);
+                }
+                else if (markerclicked==33) {
+                    im.setImageResource(R.drawable.focal0);
+                }
+                else if (markerclicked==34) {
+                    im.setImageResource(R.drawable.prefect0);
                 }
                 else{}
 
 
                 return v;
+
+
+            }
+
+            // Defines the contents of the InfoWindow
+            @Override
+            public View getInfoContents(Marker marker) {
+
+                return null;
 
             }
         });

@@ -1,6 +1,9 @@
 package com.example.edunav;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,13 +14,31 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity2 extends AppCompatActivity {
+
 
     ImageButton myImageButton;
     ImageButton myImageButton2;
 
     Button Button;
+    private DialogInterface.OnClickListener dialogClickListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +83,47 @@ public class MainActivity2 extends AppCompatActivity {
         Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent maps = new Intent(MainActivity2.this, MapsActivity.class);
-                startActivity(maps);
+                // on below line we are creating a dialog click listener
+                // variable and initializing it.
+                dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            // on below line we are setting a click listener
+                            // for our positive button
+                            case DialogInterface.BUTTON_POSITIVE:
+                                // on below line we are displaying a toast message.
+                                Intent visits = new Intent(MainActivity2.this, visits.class);
+                                startActivity(visits);
+                                break;
+                            // on below line we are setting click listener
+                            // for our negative button.
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                Intent maps = new Intent(MainActivity2.this, MapsActivity.class);
+                                startActivity(maps);
+                                break;
+
+                        }
+                    }
+                };
+                // on below line we are creating a builder variable for our alert dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity2.this);
+                // on below line we are setting message for our dialog box.
+                builder.setMessage("Would you like to view the most visited locations page? Skip to go to maps")
+                        // on below line we are setting positive button
+                        // and setting text to it.
+                        .setPositiveButton("Yes", dialogClickListener)
+                        // on below line we are setting negative button
+                        // and setting text to it.
+                        .setNegativeButton("Skip", dialogClickListener)
+                        // on below line we are calling
+                        // show to display our dialog.
+                        .show();
+
+
             }
         });
+
 
 
     }
