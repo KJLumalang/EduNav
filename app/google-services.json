@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "538910526360",
+    "project_id": "navinites-ee06a",
+    "storage_bucket": "navinites-ee06a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538910526360:android:d6613b5639126877bab9ed",
+        "android_client_info": {
+          "package_name": "com.example.edunav"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538910526360-h8tp0ctb0qd8sugtt9a20fpsnoo5e7of.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBylVahyr5V2UZAA8gIWXjX7ICNt79cRfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538910526360-h8tp0ctb0qd8sugtt9a20fpsnoo5e7of.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
