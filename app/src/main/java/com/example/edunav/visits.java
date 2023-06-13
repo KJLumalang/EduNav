@@ -47,7 +47,7 @@ public class visits extends AppCompatActivity {
         recyclerView = findViewById(R.id.test);
 
         database = FirebaseDatabase.getInstance("https://navinites-ee06a-default-rtdb.firebaseio.com").getReference("visits");
-        Query query = database.orderByValue().limitToLast(6);
+        Query query = database.orderByChild("/view").limitToLast(6);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

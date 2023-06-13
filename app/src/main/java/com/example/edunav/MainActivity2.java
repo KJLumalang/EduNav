@@ -93,12 +93,15 @@ public class MainActivity2 extends AppCompatActivity {
                             // for our positive button
                             case DialogInterface.BUTTON_POSITIVE:
                                 // on below line we are displaying a toast message.
+                                finish();
                                 Intent visits = new Intent(MainActivity2.this, visits.class);
                                 startActivity(visits);
+
                                 break;
                             // on below line we are setting click listener
                             // for our negative button.
                             case DialogInterface.BUTTON_NEGATIVE:
+                                finish();
                                 Intent maps = new Intent(MainActivity2.this, MapsActivity.class);
                                 startActivity(maps);
                                 break;

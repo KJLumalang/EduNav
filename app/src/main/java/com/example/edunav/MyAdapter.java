@@ -15,6 +15,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
     ArrayList<User> list;
 
+
     public MyAdapter(Context context, ArrayList<User> list) {
         this.context = context;
         this.list = list;
@@ -25,6 +26,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(context).inflate(R.layout.loclist,parent,false);
+
         return new MyViewHolder(v);
 
     }
@@ -32,10 +34,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        User user = list.get(position);
-        holder.name.setText(user.getName());
-        holder.view.setText(user.getView());
 
+        User user = list.get(position);
+
+        holder.name.setText(user.getName());
+
+        holder.view.setText(user.getView().toString());
 
 
     }
@@ -44,6 +48,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public int getItemCount() {
         return list.size();
     }
+
+
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 

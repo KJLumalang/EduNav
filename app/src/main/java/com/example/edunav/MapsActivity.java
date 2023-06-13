@@ -307,6 +307,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Toast.makeText(getApplicationContext(),"Moved to CR", Toast.LENGTH_LONG).show();
                 }
 
+                else if (location.equalsIgnoreCase("cr2")||location.equalsIgnoreCase("toilet2")){
+                    LatLng loc = new LatLng(13.792537359716832, 121.00179665292717);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Moved to CR2", Toast.LENGTH_LONG).show();
+                }
+
                 else if (location.equalsIgnoreCase("immersion room")){
                     LatLng loc = new LatLng(13.792819660413048, 121.00237291632888);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
@@ -336,8 +342,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
                     Toast.makeText(getApplicationContext(),"Moved to Dump Site", Toast.LENGTH_LONG).show();
                 }
-
-
+                else if (location.equalsIgnoreCase("SHS Focal Person Room")||location.equalsIgnoreCase("SHS Focal")){
+                    LatLng loc = new LatLng(13.792523386023257, 121.00233422676274);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"SHS Focal Person Room", Toast.LENGTH_LONG).show();
+                }
+                else if (location.equalsIgnoreCase("Prefect of Discipline")){
+                    LatLng loc = new LatLng(13.791911272504938, 121.00287197027075);
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+                    Toast.makeText(getApplicationContext(),"Prefect of Discipline", Toast.LENGTH_LONG).show();
+                }
                 else{
                     Toast.makeText(getApplicationContext(),"No result please try another word", Toast.LENGTH_LONG).show();
                 }
@@ -405,11 +419,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(admin)
                 .rotation(0)
                 .title("Admin Building")
-                .snippet("Principal’s Office\n" +
-                        "AVR\n" +
-                        "JHS Faculty\n" +
-                        " SHS and JHS Registrar")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("admin_s_bldg",160,160)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("admin_s_bldg",100,100)));
 
         Marker mkr1 = mMap.addMarker(adminM);
         markers.put(mkr1.getId(), 1);
@@ -503,7 +513,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions he_M = new MarkerOptions()
                 .position(he)
                 .title("H.E Room")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("canteen",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("he_room",100,100)));
 
         Marker mkr10 = mMap.addMarker(he_M);
         markers.put(mkr10.getId(), 10);
@@ -673,7 +683,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions cr2_M = new MarkerOptions()
                 .position(cr2)
                 .title("CR")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr1",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("cr2",100,100)));
         Marker mkr26 = mMap.addMarker(cr2_M);
         markers.put(mkr26.getId(), 26);
 
@@ -682,7 +692,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions construction_M = new MarkerOptions()
                 .position(construction)
                 .title("Under Construction")
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("warning",100,100)));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeBitmap("construction",100,100)));
         Marker mkr27 = mMap.addMarker(construction_M);
         markers.put(mkr27.getId(), 27);
 
@@ -814,17 +824,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 if(markerclicked==1) {
                     im.setImageResource(R.drawable.admin0);
+                    im.getLayoutParams().height = 700;
+                    im.getLayoutParams().width= 400;
+                    im.requestLayout();
                     //start
                     DatabaseReference db1 = database.child("1/view");
                     db1.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-
-                            String val = (String) dataSnapshot.getValue();
-                            long value = Long.parseLong(val);
-                            value = value + 1;
-                            String value1 = String.valueOf(value);
-                            database.child("1/view").setValue(value1);
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("1/view").setValue(++value);
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -836,102 +845,597 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 else if (markerclicked==2) {
                     im.setImageResource(R.drawable.rizal0);
+                    //start
+                    DatabaseReference db1 = database.child("2/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("2/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==3) {
                     im.setImageResource(R.drawable.field0);
+                    //start
+                    DatabaseReference db1 = database.child("3/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("3/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==4) {
                     im.setImageResource(R.drawable.pool_side0);
+                    //start
+                    DatabaseReference db1 = database.child("4/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("4/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==5) {
                     im.setImageResource(R.drawable.shs_bldg_b0);
+                    //start
+                    DatabaseReference db1 = database.child("5/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("5/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==6) {
                     im.setImageResource(R.drawable.shs_classrooms0);
+                    //start
+                    DatabaseReference db1 = database.child("6/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("6/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==7) {
                     im.setImageResource(R.drawable.beauty0);
+                    //start
+                    DatabaseReference db1 = database.child("7/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("7/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==8) {
                     im.setImageResource(R.drawable.cookery_room0);
+                    //start
+                    DatabaseReference db1 = database.child("8/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("8/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==9) {
                     im.setImageResource(R.drawable.guidance_office0);
+                    //start
+                    DatabaseReference db1 = database.child("9/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("9/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==10) {
                     im.setImageResource(R.drawable.canteen0);
+                    //start
+                    DatabaseReference db1 = database.child("10/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("10/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==11) {
-                    im.setImageResource(R.drawable.canteen0);
+                    im.setImageResource(R.drawable.he_room0);
+                    //start
+                    DatabaseReference db1 = database.child("11/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("11/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==12) {
                     im.setImageResource(R.drawable.tvl0);
+                    //start
+                    DatabaseReference db1 = database.child("12/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("12/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==13) {
                     im.setImageResource(R.drawable.science0);
+                    //start
+                    DatabaseReference db1 = database.child("13/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("13/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==14) {
                     im.setImageResource(R.drawable.stve0);
+                    //start
+                    DatabaseReference db1 = database.child("14/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("14/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==15) {
                     im.setImageResource(R.drawable.main_gate0);
+                    //start
+                    DatabaseReference db1 = database.child("15/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("15/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==16) {
                     im.setImageResource(R.drawable.gate0);
+                    //start
+                    DatabaseReference db1 = database.child("16/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("16/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==17) {
                     im.setImageResource(R.drawable.shs_bldg_a0);
+                    //start
+                    DatabaseReference db1 = database.child("17/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("17/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==18) {
                     im.setImageResource(R.drawable.gymnasium0);
+                    //start
+                    DatabaseReference db1 = database.child("18/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("18/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==19) {
                     im.setImageResource(R.drawable.g10_bldg_a0);
+                    //start
+                    DatabaseReference db1 = database.child("19/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("19/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==20) {
                     im.setImageResource(R.drawable.electricity0);
+                    //start
+                    DatabaseReference db1 = database.child("20/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("20/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==21) {
                     im.setImageResource(R.drawable.g10_bldg_b0);
+                    //start
+                    DatabaseReference db1 = database.child("21/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("21/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==22) {
                     im.setImageResource(R.drawable.g8_classrooms0);
+                    //start
+                    DatabaseReference db1 = database.child("22/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("22/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==23) {
                     im.setImageResource(R.drawable.main_bldg0);
+                    //start
+                    DatabaseReference db1 = database.child("23/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("23/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==24) {
                     im.setImageResource(R.drawable.guard0);
+                    //start
+                    DatabaseReference db1 = database.child("24/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("24/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==25) {
                     im.setImageResource(R.drawable.cr1);
+                    //start
+                    DatabaseReference db1 = database.child("25/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("25/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==26) {
-                    im.setImageResource(R.drawable.cr1);
+                    im.setImageResource(R.drawable.cr20);
+                    //start
+                    DatabaseReference db1 = database.child("26/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("26/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==27) {
-                    im.setImageResource(R.drawable.cr1);
+                    im.setImageResource(R.drawable.construction0);
+                    //start
+                    DatabaseReference db1 = database.child("27/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("27/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==28) {
                     im.setImageResource(R.drawable.jhs_clinic0);
+                    //start
+                    DatabaseReference db1 = database.child("28/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("28/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==29) {
                     im.setImageResource(R.drawable.immerssion0);
+                    //start
+                    DatabaseReference db1 = database.child("29/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("29/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==30) {
                     im.setImageResource(R.drawable.shs_clinic0);
+                    //start
+                    DatabaseReference db1 = database.child("30/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("30/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==31) {
                     im.setImageResource(R.drawable.welding0);
+                    //start
+                    DatabaseReference db1 = database.child("31/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("31/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==32) {
                     im.setImageResource(R.drawable.dump0);
+                    //start
+                    DatabaseReference db1 = database.child("32/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("32/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==33) {
                     im.setImageResource(R.drawable.focal0);
+                    //start
+                    DatabaseReference db1 = database.child("33/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("33/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else if (markerclicked==34) {
                     im.setImageResource(R.drawable.prefect0);
+                    //start
+                    DatabaseReference db1 = database.child("34/view");
+                    db1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Long value = (Long)dataSnapshot.getValue();
+                            database.child("34/view").setValue(++value);
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+
+                    });
+                    //end
                 }
                 else{}
 
@@ -11269,6 +11773,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
                 finish();
+                Intent main2 = new Intent(MapsActivity.this, MainActivity2.class);
+                startActivity(main2);
             }
         });
         builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
