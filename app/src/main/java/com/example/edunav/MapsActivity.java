@@ -104,6 +104,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
+
+
     //for resizing drawables
     public Bitmap resizeBitmap(String drawableName, int width, int height){
         Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(drawableName, "drawable", getPackageName()));
@@ -122,6 +124,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         database = FirebaseDatabase.getInstance("https://navinites-ee06a-default-rtdb.firebaseio.com").getReference("visits");
 
@@ -406,6 +410,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
+
+
         mMap = googleMap;
         mMap.getUiSettings().setMapToolbarEnabled(false);
 
@@ -801,6 +807,153 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //move camera to fill the bound to screen
         mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding));
+
+        String LocsName = getIntent().getStringExtra("LocName");
+
+        if (!LocsName.isEmpty()) {
+
+            if (LocsName.equals("Admin Building")) {
+                LatLng loc = new LatLng(13.7924604,121.0025501);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Rizal Park")) {
+                LatLng loc = new LatLng(13.792288, 121.003093);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Field")) {
+                LatLng loc = new LatLng(13.792933, 121.002053);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Poolside")) {
+                LatLng loc = new LatLng(13.793341, 121.002542);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("SHS Building B")) {
+                LatLng loc = new LatLng(13.7935735,121.0024519);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("SHS Classrooms")) {
+                LatLng loc = new LatLng(13.7932733,121.0023886);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Beauty Care Room")) {
+                LatLng loc = new LatLng(13.7930047,121.0025058);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Cookery Rooms")) {
+                LatLng loc = new LatLng(13.7930606,121.0026786);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Guidance")) {
+                LatLng loc = new LatLng(13.7929052,121.0025095);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("H.E Room")) {
+                LatLng loc = new LatLng(13.7928834,121.0026764);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Canteen")) {
+                LatLng loc = new LatLng(13.7927337,121.0026818);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("TVL Classroom")) {
+                LatLng loc = new LatLng(13.7925837,121.0027081);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Science Park")) {
+                LatLng loc = new LatLng(13.7922604,121.0026845);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("STVE Classrooms")) {
+                LatLng loc = new LatLng(13.7923624,121.0037623);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Main Gate")) {
+                LatLng loc = new LatLng(13.7922103,121.0039427);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Gate")) {
+                LatLng loc = new LatLng(13.7933748,121.0017241);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("SHS Building A")) {
+                LatLng loc = new LatLng(13.7925286,121.0020808);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Gymnasium")) {
+                LatLng loc = new LatLng(13.7922342,121.0020808);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Grade 10 Building A")) {
+                LatLng loc = new LatLng(13.7919917,121.0023384);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Electricity Room")) {
+                LatLng loc = new LatLng(13.7918212,121.0027778);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Grade 10 Building B")) {
+                LatLng loc = new LatLng(13.791917,121.001679);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Grade 8 Classrooms")) {
+                LatLng loc = new LatLng(13.7918133,121.002288);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Main Building")) {
+                LatLng loc = new LatLng(13.7925991,121.0031756);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Guard House")) {
+                LatLng loc = new LatLng(13.792283599003385, 121.00394303301627);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("CR1")) {
+                LatLng loc = new LatLng(13.791822035874409, 121.00196433254081);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("CR2")) {
+                LatLng loc = new LatLng(13.792537359716832, 121.00179665292717);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Under Construction")) {
+                LatLng loc = new LatLng(13.792723033440355, 121.00167142914209);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("JHS Clinic")) {
+                LatLng loc = new LatLng(13.791980009565064, 121.00284380215881);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Immersion Room")) {
+                LatLng loc = new LatLng(13.792784845410461, 121.00236966913339);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("SHS Clinic")) {
+                LatLng loc = new LatLng(13.792784845410461, 121.00236966913339);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Welding Rooms")) {
+                LatLng loc = new LatLng(13.792401819503414, 121.00359582828865);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Dump Site")) {
+                LatLng loc = new LatLng(13.79354610932843, 121.00225956481562);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("SHS Focal Person Room")) {
+                LatLng loc = new LatLng(13.792523386023257, 121.00233422676274);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else if (LocsName.equals("Prefect of Discipline")) {
+                LatLng loc = new LatLng(13.791911272504938, 121.00287197027075);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            }
+            else {
+                Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
 
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 

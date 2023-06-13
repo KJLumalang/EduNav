@@ -66,7 +66,6 @@ public class visits extends AppCompatActivity {
                 }
                 myAdapter.notifyDataSetChanged();
 
-
             }
 
             @Override
